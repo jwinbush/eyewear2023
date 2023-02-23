@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { FaBeer } from "react-icons/fa";
 
+// import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -9,7 +10,7 @@ const Header = () => {
     return (
         <div >
             <nav
-  className="relative flex w-full items-center justify-between bg-neutral-50 py-2 text-neutral-600 shadow-lg dark:bg-neutral-700 dark:text-neutral-200 dark:shadow-black/5 lg:flex-wrap lg:justify-start"
+  className="relative flex w-full items-center justify-between bg-neutral-50 py-2 text-neutral-600 shadow-lg bg-neutral-700 dark:text-neutral-200 dark:shadow-black/5 flex-wrap justify-start"
   data-te-navbar-ref>
   <div className="px-6">
     <button
@@ -21,18 +22,7 @@ const Header = () => {
       aria-expanded="false"
       aria-label="Toggle navigation">
       <span className="[&>svg]:w-8">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="h-8 w-8">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
+       <FaBeer className='text-sm'/>
       </span>
     </button>
     <div
