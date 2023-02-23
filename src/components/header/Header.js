@@ -1,5 +1,21 @@
 import React from "react";
+import $ from 'jquery';
+
 // import { Link } from 'react-router-dom';
+
+
+//jQuery for navbar
+$(function() {
+  $('#list').click(function() {
+    $('#navbarSupportedContentQ').toggle();
+  });
+})
+
+$(function() {
+  $('#dropdownMenuButtonQ').click(function() {
+    $('#megaMenu').toggle();
+  });
+})
 
 const Header = () => {
   return (
@@ -17,6 +33,7 @@ const Header = () => {
             aria-controls="navbarSupportedContentQ"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            id="list"
           >
             <span className="[&>svg]:w-8">
               <svg
@@ -35,6 +52,8 @@ const Header = () => {
               </svg>
             </span>
           </button>
+
+          
           <div
             className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
             id="navbarSupportedContentQ"
@@ -80,6 +99,7 @@ const Header = () => {
                   </span>
                 </a>
                 <div
+                id="megaMenu" 
                   className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
                   aria-labelledby="dropdownMenuButtonY"
                   data-te-dropdown-menu-ref
@@ -455,3 +475,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
