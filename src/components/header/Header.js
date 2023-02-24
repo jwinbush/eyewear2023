@@ -1,32 +1,133 @@
 import React from "react";
-import $ from 'jquery';
+import $ from "jquery";
 
 // import { Link } from 'react-router-dom';
 
-
 //jQuery for navbar
-$(function() {
-  $('#list').click(function() {
-    $('#navbarSupportedContentQ').toggle();
-  });
-})
 
-$(function() {
-  $('#dropdownMenuButtonQ').click(function() {
-    $('#megaMenu').toggle();
+// $(window).scroll(function() {
+//   if ($(this).scrollTop() > 0) {
+//     $('.a').fadeOut();
+//   } else {
+//     $('.a').fadeIn();
+//   }
+// });
+
+$(function () {
+  $("#list").click(function () {
+    $("#navbarSupportedContentQ").toggle(400);
+    $("#suitsMenu").hide();
+    $("#clothingMenu").hide();
   });
-})
+});
+
+$(function () {
+  $("#suitsMenuButton").click(function () {
+    $("#suitsMenu").fadeToggle();
+    $("#clothingMenu").fadeOut();
+  });
+});
+
+$(function () {
+  $("#clothingMenuButton").click(function () {
+    $("#clothingMenu").fadeToggle();
+    $("#suitsMenu").fadeOut();
+  });
+});
 
 const Header = () => {
+  const suitsTuxedos = [
+    {
+      id: 1,
+      title: "New Arrivals",
+      imageSrc:
+        "https://static.theblacktux.com/products/suits/medium-blue-suit/2_10142022_BLACKTUX104649_3.4.jpg?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 2,
+      title: "Business",
+      imageSrc:
+        "https://static.theblacktux.com/products/suits/black-suit/5_161129_TBT_Ecom_Black_Suit_1_1608_w1_1812x1875.jpg",
+      link: "#",
+    },
+    {
+      id: 3,
+      title: "Tuxedos",
+      imageSrc:
+        "https://static.theblacktux.com/products/tuxedos/marigold-shawl-jacket-tuxedo/03_2018_0907_TBT_HC18_MarigoldShawlJacketTux_15_V2_w1_1812x1875.JPG?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 4,
+      title: "Formal events",
+      imageSrc:
+        "https://static.theblacktux.com/products/tuxedos/notched-lapel-tuxedo/2_02_NLT_0706_Ext_F_1812x1875.jpg?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 5,
+      title: "Wedding",
+      imageSrc:
+        "https://static.theblacktux.com/products/tuxedos/Light%20Blue%20Shawl%20Tuxedo/01_2019_0924_TBT_HC19_eComm_01_LightBlueShawl_044.jpg?width=845&height=875",
+      link: "#",
+    },
+  ];
+
+  const clothes = [
+    {
+      id: 1,
+      title: "Shirts",
+      imageSrc:
+        "https://static.theblacktux.com/products/shirts/white-dress-shirt/2_06_CLBBP_2836_F_1812x1875.jpg?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 2,
+      title: "Vests",
+      imageSrc:
+        "https://static.theblacktux.com/products/vests/navy-vest/1_08_CLBNS_3552_Ext_F_1812x1875.jpg?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 3,
+      title: "Pants",
+      imageSrc:
+        "https://static.theblacktux.com/products/suits/light-grey-suit/7_161129_TBT_Ecom_Light_Gray_Suit_2_1474_w1_1812x1875.jpg?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 4,
+      title: "Shoes",
+      imageSrc:
+        "https://static.theblacktux.com/products/shoes/cap-toe-shoes/1_005_1812x1875.jpg?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 5,
+      title: "Neckwear",
+      imageSrc:
+        "https://static.theblacktux.com/products/neckwear/classic-black-neck-tie/1_TIE_FLAT_BLACK_1812x1875.jpg?width=845&height=875",
+      link: "#",
+    },
+  ];
+
   return (
-    <div>
+    <div className="uppercase font-bold">
+      <div className="bg-black border-b border-gray-700 text-center py-2 text-sm text-white">
+        <h1>
+          <a href="/#" className="cursor-pointer">
+            Join for exclusive offers 🎖️
+          </a>
+        </h1>
+      </div>
       <nav
-        className="relative flex w-full items-center justify-between bg-neutral-50 py-2 text-neutral-600 shadow-lg dark:bg-neutral-700 dark:text-neutral-200 dark:shadow-black/5 lg:flex-wrap lg:justify-start"
+        className="relative flex w-full items-center justify-between bg-gradient-to-r from-black to-gray-800 py-2 text-white shadow-lg lg:flex-wrap lg:justify-start"
         data-te-navbar-ref
       >
         <div className="px-6">
           <button
-            className="border-0 bg-transparent py-3 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
+            className="border-0 py-3 text-xl leading-none transition-shadow duration-150 ease-in-outtext-white lg:hidden"
             type="button"
             data-te-collapse-init
             data-te-target="#navbarSupportedContentQ"
@@ -53,36 +154,25 @@ const Header = () => {
             </span>
           </button>
 
-          
           <div
             className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
             id="navbarSupportedContentQ"
             data-te-collapse-item
           >
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
-              <li data-te-nav-item-ref>
-                <a
-                  className="block py-2 pr-2 transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:px-2"
-                  href="#!"
-                  data-te-ripple-init
-                  data-te-ripple-color="light"
-                >
-                  Regular link
-                </a>
-              </li>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:px-2"
-                  href="#"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-neutral-300"
+                  href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   type="button"
-                  id="dropdownMenuButtonQ"
+                  id="suitsMenuButton"
                   data-te-dropdown-toggle-ref
                   aria-expanded="false"
                   data-te-nav-link-ref
                 >
-                  Mega menu
+                  Suits & Tuxedos
                   <span className="ml-2 w-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,369 +189,216 @@ const Header = () => {
                   </span>
                 </a>
                 <div
-                id="megaMenu" 
+                  id="suitsMenu"
+                  className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding text-neutral-700 shadow-lg dark:bg-neutral-700 dark:text-neutral-200 [&[data-te-dropdown-show]]:block"
+                  aria-labelledby="dropdownMenuButtonU"
+                  data-te-dropdown-menu-ref
+                >
+                  <div className=" flex px-6 py-5 lg:px-8 bg-white">
+                    <div className=" grid gap-6 md:grid-cols-3">
+                      {suitsTuxedos.map(({ title, imageSrc, link }) => (
+                        <div>
+                          <p className="block w-full pt-2 font-semibold uppercase">
+                            {title}
+                          </p>
+                          <div
+                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat"
+                            data-te-ripple-init
+                            data-te-ripple-color="light"
+                          >
+                            <img
+                              src={imageSrc}
+                              className="md:w-full md:h-full shadow-lg dark:shadow-black "
+                              alt="Suits & Tuxedos"
+                            />
+                            <a href={link}>
+                              <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                            </a>
+                          </div>
+                          <div className="mt-1 mb-3 flex items-center justify-between">
+                            <p className="flex items-center text-primary dark:text-primary-400">
+                              <span className="mr-2 w-4">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  fill="currentColor"
+                                  className="h-5 w-5"
+                                >
+                                  <path d="M21.721 12.752a9.711 9.711 0 00-.945-5.003 12.754 12.754 0 01-4.339 2.708 18.991 18.991 0 01-.214 4.772 17.165 17.165 0 005.498-2.477zM14.634 15.55a17.324 17.324 0 00.332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 00.332 4.647 17.385 17.385 0 005.268 0zM9.772 17.119a18.963 18.963 0 004.456 0A17.182 17.182 0 0112 21.724a17.18 17.18 0 01-2.228-4.605zM7.777 15.23a18.87 18.87 0 01-.214-4.774 12.753 12.753 0 01-4.34-2.708 9.711 9.711 0 00-.944 5.004 17.165 17.165 0 005.498 2.477zM21.356 14.752a9.765 9.765 0 01-7.478 6.817 18.64 18.64 0 001.988-4.718 18.627 18.627 0 005.49-2.098zM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 001.988 4.718 9.765 9.765 0 01-7.478-6.816zM13.878 2.43a9.755 9.755 0 016.116 3.986 11.267 11.267 0 01-3.746 2.504 18.63 18.63 0 00-2.37-6.49zM12 2.276a17.152 17.152 0 012.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0112 2.276zM10.122 2.43a18.629 18.629 0 00-2.37 6.49 11.266 11.266 0 01-3.746-2.504 9.754 9.754 0 016.116-3.985z" />
+                                </svg>
+                              </span>
+                              Travels
+                            </p>
+                            <p>
+                              <u>15.07.2021</u>
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
+              <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
+                <a
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-neutral-300"
+                  href="/#"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  type="button"
+                  id="clothingMenuButton"
+                  data-te-dropdown-toggle-ref
+                  aria-expanded="false"
+                  data-te-nav-link-ref
+                >
+                  Clothing
+                  <span className="ml-2 w-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <div
+                  id="clothingMenu"
+                  className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding text-neutral-700 shadow-lg dark:bg-neutral-700 dark:text-neutral-200 [&[data-te-dropdown-show]]:block"
+                  aria-labelledby="dropdownMenuButtonU"
+                  data-te-dropdown-menu-ref
+                >
+                  <div className=" flex px-6 py-5 lg:px-8 bg-white">
+                    <div className=" grid gap-6 md:grid-cols-3">
+                      {clothes.map(({ title, imageSrc, link }) => (
+                        <div>
+                          <p className="block w-full pt-2 font-semibold uppercase">
+                            {title}
+                          </p>
+                          <div
+                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat"
+                            data-te-ripple-init
+                            data-te-ripple-color="light"
+                          >
+                            <img
+                              src={imageSrc}
+                              className="md:w-full md:h-full shadow-lg dark:shadow-black "
+                              alt="All Clothes"
+                            />
+                            <a href={link}>
+                              <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                            </a>
+                          </div>
+                          <div className="mt-1 mb-3 flex items-center justify-between">
+                            <p className="flex items-center text-primary dark:text-primary-400">
+                              <span className="mr-2 w-4">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  fill="currentColor"
+                                  className="h-5 w-5"
+                                >
+                                  <path d="M21.721 12.752a9.711 9.711 0 00-.945-5.003 12.754 12.754 0 01-4.339 2.708 18.991 18.991 0 01-.214 4.772 17.165 17.165 0 005.498-2.477zM14.634 15.55a17.324 17.324 0 00.332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 00.332 4.647 17.385 17.385 0 005.268 0zM9.772 17.119a18.963 18.963 0 004.456 0A17.182 17.182 0 0112 21.724a17.18 17.18 0 01-2.228-4.605zM7.777 15.23a18.87 18.87 0 01-.214-4.774 12.753 12.753 0 01-4.34-2.708 9.711 9.711 0 00-.944 5.004 17.165 17.165 0 005.498 2.477zM21.356 14.752a9.765 9.765 0 01-7.478 6.817 18.64 18.64 0 001.988-4.718 18.627 18.627 0 005.49-2.098zM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 001.988 4.718 9.765 9.765 0 01-7.478-6.816zM13.878 2.43a9.755 9.755 0 016.116 3.986 11.267 11.267 0 01-3.746 2.504 18.63 18.63 0 00-2.37-6.49zM12 2.276a17.152 17.152 0 012.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0112 2.276zM10.122 2.43a18.629 18.629 0 00-2.37 6.49 11.266 11.266 0 01-3.746-2.504 9.754 9.754 0 016.116-3.985z" />
+                                </svg>
+                              </span>
+                              Travels
+                            </p>
+                            <p>
+                              <u>15.07.2021</u>
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
+              <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
+                <a
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-neutral-300 dark:hover:text-white dark:focus:text-white lg:px-2"
+                  href="/#"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  type="button"
+                  id="clothingMenuButton"
+                  data-te-dropdown-toggle-ref
+                  aria-expanded="false"
+                  data-te-nav-link-ref
+                >
+                  Accessories
+                  <span className="ml-2 w-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <div
+                  id="clothingMenu"
                   className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
                   aria-labelledby="dropdownMenuButtonY"
                   data-te-dropdown-menu-ref
                 >
-                  <div className="px-6 py-5 lg:px-8">
-                    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-                      <div>
-                        <p className="block w-full border-b border-neutral-200 px-6 py-2 font-semibold uppercase text-neutral-700 dark:border-neutral-500 dark:text-white">
-                          Lorem ipsum
-                        </p>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
+                  <div className=" flex px-6 py-5 lg:px-8 bg-white">
+                    <div className=" grid gap-6 md:grid-cols-3">
+                      {suitsTuxedos.map(({ title, imageSrc, link }) => (
+                        <div>
+                          <p className="block w-full pt-2 font-semibold uppercase">
+                            {title}
+                          </p>
+                          <div
+                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat"
+                            data-te-ripple-init
+                            data-te-ripple-color="light"
+                          >
                             <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
+                              src={imageSrc}
+                              className="md:w-full md:h-full shadow-lg dark:shadow-black "
+                              alt="Suits & Tuxedos"
                             />
+                            <a href={link}>
+                              <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                            </a>
                           </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
+                          <div className="mt-1 mb-3 flex items-center justify-between">
+                            <p className="flex items-center text-primary dark:text-primary-400">
+                              <span className="mr-2 w-4">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  fill="currentColor"
+                                  className="h-5 w-5"
+                                >
+                                  <path d="M21.721 12.752a9.711 9.711 0 00-.945-5.003 12.754 12.754 0 01-4.339 2.708 18.991 18.991 0 01-.214 4.772 17.165 17.165 0 005.498-2.477zM14.634 15.55a17.324 17.324 0 00.332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 00.332 4.647 17.385 17.385 0 005.268 0zM9.772 17.119a18.963 18.963 0 004.456 0A17.182 17.182 0 0112 21.724a17.18 17.18 0 01-2.228-4.605zM7.777 15.23a18.87 18.87 0 01-.214-4.774 12.753 12.753 0 01-4.34-2.708 9.711 9.711 0 00-.944 5.004 17.165 17.165 0 005.498 2.477zM21.356 14.752a9.765 9.765 0 01-7.478 6.817 18.64 18.64 0 001.988-4.718 18.627 18.627 0 005.49-2.098zM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 001.988 4.718 9.765 9.765 0 01-7.478-6.816zM13.878 2.43a9.755 9.755 0 016.116 3.986 11.267 11.267 0 01-3.746 2.504 18.63 18.63 0 00-2.37-6.49zM12 2.276a17.152 17.152 0 012.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0112 2.276zM10.122 2.43a18.629 18.629 0 00-2.37 6.49 11.266 11.266 0 01-3.746-2.504 9.754 9.754 0 016.116-3.985z" />
+                                </svg>
+                              </span>
+                              Travels
                             </p>
                             <p>
                               <u>15.07.2021</u>
                             </p>
                           </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/042.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/043.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/044.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                      <div>
-                        <p className="block w-full border-b border-neutral-200 px-6 py-2 font-semibold uppercase text-neutral-700 dark:border-neutral-500 dark:text-white">
-                          Explit voluptas
-                        </p>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/042.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/043.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/044.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                      <div>
-                        <p className="block w-full border-b border-neutral-200 px-6 py-2 font-semibold uppercase text-neutral-700 dark:border-neutral-500 dark:text-white">
-                          Iste quaerato
-                        </p>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/042.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/043.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/044.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                      <div>
-                        <p className="block w-full border-b border-neutral-200 px-6 py-2 font-semibold uppercase text-neutral-700 dark:border-neutral-500 dark:text-white">
-                          Cras justo odio
-                        </p>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/042.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center border-b border-neutral-200 px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/043.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                        <a
-                          href="#!"
-                          aria-current="true"
-                          className="flex w-full items-center px-6 py-3 transition duration-150 ease-in-out hover:bg-neutral-50 hover:text-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-white"
-                        >
-                          <div className="shrink-0">
-                            <img
-                              src="https://tecdn.b-cdn.net/img/new/standard/city/044.webp"
-                              className="w-20 rounded shadow-lg dark:shadow-black/10"
-                              alt="Hollywood Sign on The Hill"
-                            />
-                          </div>
-                          <div className="ml-4 grow">
-                            <p className="mb-1 font-semibold">
-                              Sed ut perspiciatis unde omnis
-                            </p>
-                            <p>
-                              <u>15.07.2021</u>
-                            </p>
-                          </div>
-                        </a>
-                      </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -475,5 +412,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
