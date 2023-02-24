@@ -160,7 +160,7 @@ const Header = () => {
 
   return (
     <div className="uppercase text-xs font-bold">
-      <div className="bg-gradient-to-r from-gray-600 via-gray-900 to-gray-800 border-b border-gray-700 text-center py-2 text-xs text-white">
+      <div className="bg-gradient-to-r from-gray-700 via-gray-900 to-gray-800 border-b border-gray-700 text-center py-2 text-xs text-white">
         <h1>
           <a href="/#" className="cursor-pointer">
             Join for exclusive offers 🎖️
@@ -168,7 +168,7 @@ const Header = () => {
         </h1>
       </div>
       <nav
-        className="relative flex w-full items-center justify-between bg-black py-2 text-white shadow-lg lg:flex-wrap lg:justify-start"
+        className="relative flex w-full items-center justify-between bg-black py-2 text-white shadow-lg lg:flex-wrap lg:justify-start border-b border-gray-700"
         data-te-navbar-ref
       >
         <div className="px-6">
@@ -208,7 +208,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-yellow-400"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-300"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -290,7 +290,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static lg:px-8" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-yellow-400"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-300"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -372,7 +372,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-yellow-400 dark:hover:text-white dark:focus:text-white lg:px-2"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-gray-300 dark:hover:text-white dark:focus:text-white lg:px-2"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
