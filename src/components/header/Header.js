@@ -15,9 +15,11 @@ import $ from "jquery";
 
 $(function () {
   $("#list").click(function () {
-    $("#navbarSupportedContentQ").toggle(400);
+    $("#navbarSupportedContentQ").animate({width:'toggle'}, 350); //slides content onclick
     $("#suitsMenu").hide();
     $("#clothingMenu").hide();
+    $("#accessoriesMenu").hide();
+
   });
 });
 
@@ -255,7 +257,7 @@ const Header = () => {
                             <img 
                               src={imageSrc}
                               className="md:w-full md:h-full shadow-lg"
-                              alt="Suits & Tuxedos"
+                              alt="From theblacktux.com"
                             />
                             <a href={link}>
                               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
@@ -337,7 +339,7 @@ const Header = () => {
                             <img
                               src={imageSrc}
                               className="md:w-full md:h-full shadow-lg dark:shadow-black "
-                              alt="All Clothes"
+                              alt="From theblacktux.com"
                             />
                             <a href={link}>
                               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
@@ -419,7 +421,7 @@ const Header = () => {
                             <img 
                               src={imageSrc}
                               className="md:w-full md:h-full shadow-lg"
-                              alt="Suits & Tuxedos"
+                              alt="From theblacktux.com"
                             />
                             <a href={link}>
                               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
