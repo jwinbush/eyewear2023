@@ -23,20 +23,32 @@ $(function () {
 
 $(function () {
   $("#suitsMenuButton").click(function () {
-    $("#suitsMenu").fadeToggle();
+    $("#suitsMenu").fadeToggle(400);
     $("#clothingMenu").fadeOut();
+    $("#accessoriesMenu").fadeOut();
   });
 });
 
 $(function () {
   $("#clothingMenuButton").click(function () {
-    $("#clothingMenu").fadeToggle();
+    $("#clothingMenu").fadeToggle(400);
+    $("#suitsMenu").fadeOut();
+    $("#accessoriesMenu").fadeOut();
+  });
+});
+
+$(function () {
+  $("#accessoriesMenuButton").click(function () {
+    $("#accessoriesMenu").fadeToggle(400);
+    $("#clothingMenu").fadeOut();
     $("#suitsMenu").fadeOut();
   });
 });
 
 const Header = () => {
-  const suitsTuxedos = [
+
+  //For suits & tuxedos ul list
+  const suitsTuxedosList = [
     {
       id: 1,
       title: "New Arrivals",
@@ -74,7 +86,9 @@ const Header = () => {
     },
   ];
 
-  const clothes = [
+
+  //For clothing ul list 
+  const clothingList = [
     {
       id: 1,
       title: "Shirts",
@@ -103,18 +117,50 @@ const Header = () => {
         "https://static.theblacktux.com/products/shoes/cap-toe-shoes/1_005_1812x1875.jpg?width=845&height=875",
       link: "#",
     },
+  ];
+
+  //For clothing ul list 
+  const accessoriesList = [
     {
-      id: 5,
+      id: 1,
       title: "Neckwear",
       imageSrc:
-        "https://static.theblacktux.com/products/neckwear/classic-black-neck-tie/1_TIE_FLAT_BLACK_1812x1875.jpg?width=845&height=875",
+        "https://static.theblacktux.com/products/neckwear/black-cotton-neck-tie/1_TIE_FLAT_BLUE_MATTE_amended-to-black-cotton-necktie_1812x1875.jpg?trim=0,186&width=461",
+      link: "#",
+    },
+    {
+      id: 2,
+      title: "Belts & Suspenders",
+      imageSrc:
+        "https://static.theblacktux.com/products/belts/black-belt/1_334_1812x1875.jpg?trim=0,186&width=461",
+      link: "#",
+    },
+    {
+      id: 3,
+      title: "Clips",
+      imageSrc:
+        "https://static.theblacktux.com/products/accessory/tie-clip/1_20161028_StillLife_TieClip_0335_w1_1812x1875.jpg?trim=0,186&width=461",
+      link: "#",
+    },
+    {
+      id: 4,
+      title: "Pocket Squares",
+      imageSrc:
+        "https://static.theblacktux.com/products/accessory/black-linen-pocket-square/MS-PS01-BK001_Large_1_1812x1875.jpg?trim=0,186&width=461",
+      link: "#",
+    },
+    {
+      id: 5,
+      title: "Cufflinks, Studs & Pins",
+      imageSrc:
+        "https://static.theblacktux.com/products/cufflinks-studs/gold-tone-pearl-cufflinks/JY_015_gold_pearl_0083_1812x1875.jpg?trim=0,186&width=461",
       link: "#",
     },
   ];
 
   return (
-    <div className="uppercase font-bold">
-      <div className="bg-black border-b border-gray-700 text-center py-2 text-sm text-white">
+    <div className="uppercase text-xs font-bold">
+      <div className="bg-gradient-to-r from-gray-600 via-gray-900 to-gray-800 border-b border-gray-700 text-center py-2 text-xs text-white">
         <h1>
           <a href="/#" className="cursor-pointer">
             Join for exclusive offers 🎖️
@@ -122,7 +168,7 @@ const Header = () => {
         </h1>
       </div>
       <nav
-        className="relative flex w-full items-center justify-between bg-gradient-to-r from-black to-gray-800 py-2 text-white shadow-lg lg:flex-wrap lg:justify-start"
+        className="relative flex w-full items-center justify-between bg-black py-2 text-white shadow-lg lg:flex-wrap lg:justify-start"
         data-te-navbar-ref
       >
         <div className="px-6">
@@ -162,7 +208,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-neutral-300"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-yellow-400"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -196,7 +242,7 @@ const Header = () => {
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
                     <div className=" grid gap-6 md:grid-cols-3">
-                      {suitsTuxedos.map(({ title, imageSrc, link }) => (
+                      {suitsTuxedosList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
                             {title}
@@ -206,9 +252,9 @@ const Header = () => {
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
-                            <img
+                            <img 
                               src={imageSrc}
-                              className="md:w-full md:h-full shadow-lg dark:shadow-black "
+                              className="md:w-full md:h-full shadow-lg"
                               alt="Suits & Tuxedos"
                             />
                             <a href={link}>
@@ -242,9 +288,9 @@ const Header = () => {
             </ul>
 
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
-              <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
+              <li className="static lg:px-8" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-neutral-300"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-yellow-400"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -255,7 +301,7 @@ const Header = () => {
                   data-te-nav-link-ref
                 >
                   Clothing
-                  <span className="ml-2 w-2">
+                  <span className="ml-2 w-2 focus:rotate-180">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -272,13 +318,13 @@ const Header = () => {
                 </a>
                 <div
                   id="clothingMenu"
-                  className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding text-neutral-700 shadow-lg dark:bg-neutral-700 dark:text-neutral-200 [&[data-te-dropdown-show]]:block"
+                  className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding text-neutral-700 shadow-lg dark:bg-neutral-700  [&[data-te-dropdown-show]]:block"
                   aria-labelledby="dropdownMenuButtonU"
                   data-te-dropdown-menu-ref
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
                     <div className=" grid gap-6 md:grid-cols-3">
-                      {clothes.map(({ title, imageSrc, link }) => (
+                      {clothingList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
                             {title}
@@ -326,12 +372,12 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-neutral-300 dark:hover:text-white dark:focus:text-white lg:px-2"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-yellow-400 dark:hover:text-white dark:focus:text-white lg:px-2"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   type="button"
-                  id="clothingMenuButton"
+                  id="accessoriesMenuButton"
                   data-te-dropdown-toggle-ref
                   aria-expanded="false"
                   data-te-nav-link-ref
@@ -353,14 +399,14 @@ const Header = () => {
                   </span>
                 </a>
                 <div
-                  id="clothingMenu"
-                  className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                  id="accessoriesMenu"
+                  className="absolute left-0 top-full right-0 z-[1000] mt-0 hidden w-full border-none bg-white bg-clip-padding text-neutral-700 shadow-lg dark:bg-neutral-700 dark:text-neutral-200 [&[data-te-dropdown-show]]:block"
                   aria-labelledby="dropdownMenuButtonY"
                   data-te-dropdown-menu-ref
                 >
-                  <div className=" flex px-6 py-5 lg:px-8 bg-white">
+                  <div className="flex px-6 py-5 lg:px-8 bg-white">
                     <div className=" grid gap-6 md:grid-cols-3">
-                      {suitsTuxedos.map(({ title, imageSrc, link }) => (
+                    {accessoriesList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
                             {title}
@@ -370,9 +416,9 @@ const Header = () => {
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
-                            <img
+                            <img 
                               src={imageSrc}
-                              className="md:w-full md:h-full shadow-lg dark:shadow-black "
+                              className="md:w-full md:h-full shadow-lg"
                               alt="Suits & Tuxedos"
                             />
                             <a href={link}>
