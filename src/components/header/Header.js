@@ -13,6 +13,8 @@ import $ from "jquery";
 //   }
 // });
 
+
+// Navbar buttons
 $(function () {
   $("#list").click(function () {
     $("#navbarSupportedContentQ").animate({width:'toggle'}, 350); //slides content onclick
@@ -210,7 +212,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-300"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-400"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -243,7 +245,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-6 md:grid-cols-3">
+                    <div className=" grid gap-6 md:grid-cols-5">
                       {suitsTuxedosList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -256,7 +258,7 @@ const Header = () => {
                           >
                             <img 
                               src={imageSrc}
-                              className="md:w-full md:h-full shadow-lg"
+                              className="w-full h-full shadow-lg"
                               alt="From theblacktux.com"
                             />
                             <a href={link}>
@@ -292,7 +294,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static lg:px-8" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-300"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-400"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -325,7 +327,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-6 md:grid-cols-3">
+                    <div className=" grid gap-6 md:grid-cols-4">
                       {clothingList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -338,7 +340,7 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="md:w-full md:h-full shadow-lg dark:shadow-black "
+                              className="w-full h-full shadow-lg dark:shadow-black "
                               alt="From theblacktux.com"
                             />
                             <a href={link}>
@@ -374,7 +376,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-gray-300 dark:hover:text-white dark:focus:text-white lg:px-2"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-gray-400 dark:hover:text-white dark:focus:text-white lg:px-2"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -407,7 +409,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className="flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-6 md:grid-cols-3">
+                    <div className=" grid gap-6 md:grid-cols-5">
                     {accessoriesList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -420,7 +422,7 @@ const Header = () => {
                           >
                             <img 
                               src={imageSrc}
-                              className="md:w-full md:h-full shadow-lg"
+                              className="w-full h-full shadow-lg"
                               alt="From theblacktux.com"
                             />
                             <a href={link}>
