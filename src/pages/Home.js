@@ -19,13 +19,13 @@ $(document).ready(function () {
 function Home() {
   const slides = [
     {
-      url: image2,
+      url: image3,
     },
     {
       url: image4,
     },
     {
-      url: image3,
+      url: image2,
     },
     {
       url: image5,
@@ -50,15 +50,15 @@ function Home() {
     <div className="bg-white uppercase text-sm">
       <Header />
       <div id="mainBody">
-        <div className="lg:h-[830px] w-full m-auto relative group">
+        <div className=" h-[780px] lg:h-[830px] w-full m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-            className="w-full h-full bg-top bg-cover duration-75"
+            className="w-full h-full bg-top bg-cover duration-75 text-center"
           >
-            <h1 class=" pt-[700px] pl-4  mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-100">
+            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-700">
               Style that suits you
             </h1>
-            <p class="text-lg pl-4 font-bold text-black lg:text-xl ">
+            <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-700 lg:text-xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
