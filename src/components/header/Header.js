@@ -13,44 +13,50 @@ import $ from "jquery";
 //   }
 // });
 
-
 // Navbar buttons
 $(function () {
   $("#list").click(function () {
-    $("#navbarSupportedContentQ").animate({width:'toggle'}, 350); //slides content onclick
+    $("#navbarSupportedContentQ").animate({ width: "toggle" }, 350); //slides content onclick
     $("#suitsMenu").hide();
     $("#clothingMenu").hide();
     $("#accessoriesMenu").hide();
-
   });
 });
 
-$(function () {
-  $("#suitsMenuButton").click(function () {
-    $("#suitsMenu").fadeToggle(400);
-    $("#clothingMenu").fadeOut();
-    $("#accessoriesMenu").fadeOut();
+$(document).ready(function () {
+  $("#suitsMenuButton").hover(function () {
+    $("#clothingMenu").fadeOut(300);
+    $("#accessoriesMenu").fadeOut(300);
+    $("#suitsMenu").slideDown("medium");
+  });
+  $("#suitsMenu").mouseleave(function () {
+    $("#suitsMenu").fadeOut(300);
   });
 });
 
-$(function () {
-  $("#clothingMenuButton").click(function () {
-    $("#clothingMenu").fadeToggle(400);
-    $("#suitsMenu").fadeOut();
-    $("#accessoriesMenu").fadeOut();
+$(document).ready(function () {
+  $("#clothingMenuButton").hover(function () {
+    $("#suitsMenu").fadeOut(300);
+    $("#accessoriesMenu").fadeOut(300);
+    $("#clothingMenu").slideDown("medium");
+  });
+  $("#clothingMenu").mouseleave(function () {
+    $("#clothingMenu").fadeOut(300);
   });
 });
 
-$(function () {
-  $("#accessoriesMenuButton").click(function () {
-    $("#accessoriesMenu").fadeToggle(400);
-    $("#clothingMenu").fadeOut();
-    $("#suitsMenu").fadeOut();
+$(document).ready(function () {
+  $("#accessoriesMenuButton").hover(function () {
+    $("#suitsMenu").fadeOut(300);
+    $("#clothingMenu").fadeOut(300);
+    $("#accessoriesMenu").slideDown("medium");
+  });
+  $("#accessoriesMenu").mouseleave(function () {
+    $("#accessoriesMenu").fadeOut(300);
   });
 });
 
 const Header = () => {
-
   //For suits & tuxedos ul list
   const suitsTuxedosList = [
     {
@@ -90,8 +96,7 @@ const Header = () => {
     },
   ];
 
-
-  //For clothing ul list 
+  //For clothing ul list
   const clothingList = [
     {
       id: 1,
@@ -102,20 +107,27 @@ const Header = () => {
     },
     {
       id: 2,
-      title: "Vests",
+      title: "Sweaters",
       imageSrc:
         "https://static.theblacktux.com/products/vests/navy-vest/1_08_CLBNS_3552_Ext_F_1812x1875.jpg?width=845&height=875",
       link: "#",
     },
     {
       id: 3,
+      title: "Vests",
+      imageSrc:
+        "https://static.theblacktux.com/products/vests/navy-vest/1_08_CLBNS_3552_Ext_F_1812x1875.jpg?width=845&height=875",
+      link: "#",
+    },
+    {
+      id: 4,
       title: "Pants",
       imageSrc:
         "https://static.theblacktux.com/products/suits/light-grey-suit/7_161129_TBT_Ecom_Light_Gray_Suit_2_1474_w1_1812x1875.jpg?width=845&height=875",
       link: "#",
     },
     {
-      id: 4,
+      id: 5,
       title: "Shoes",
       imageSrc:
         "https://static.theblacktux.com/products/shoes/cap-toe-shoes/1_005_1812x1875.jpg?width=845&height=875",
@@ -123,7 +135,7 @@ const Header = () => {
     },
   ];
 
-  //For clothing ul list 
+  //For clothing ul list
   const accessoriesList = [
     {
       id: 1,
@@ -155,7 +167,7 @@ const Header = () => {
     },
     {
       id: 5,
-      title: "Cufflinks, Studs & Pins",
+      title: "Cufflinks & Studs",
       imageSrc:
         "https://static.theblacktux.com/products/cufflinks-studs/gold-tone-pearl-cufflinks/JY_015_gold_pearl_0083_1812x1875.jpg?trim=0,186&width=461",
       link: "#",
@@ -175,6 +187,9 @@ const Header = () => {
         className="relative flex w-full items-center justify-between bg-black py-2 text-white shadow-lg lg:flex-wrap lg:justify-start border-b border-gray-700"
         data-te-navbar-ref
       >
+        {/* <div className="border-0 py-3 text-xl flex leading-none transition-shadow duration-150 ease-in-outtext-white">
+          <h1>Hello</h1>
+        </div> */}
         <div className="px-6">
           <button
             className="border-0 py-3 text-xl leading-none transition-shadow duration-150 ease-in-outtext-white lg:hidden"
@@ -212,7 +227,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-400"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 hover:text-gray-400"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -256,7 +271,7 @@ const Header = () => {
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
-                            <img 
+                            <img
                               src={imageSrc}
                               className="w-full h-full shadow-lg"
                               alt="From theblacktux.com"
@@ -292,9 +307,13 @@ const Header = () => {
             </ul>
 
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
-              <li className="static lg:px-8" data-te-nav-item-ref data-te-dropdown-ref>
+              <li
+                className="static lg:px-8"
+                data-te-nav-item-ref
+                data-te-dropdown-ref
+              >
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 focus:text-gray-400"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 hover:text-gray-400"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -327,7 +346,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-6 md:grid-cols-4">
+                    <div className=" grid gap-6 md:grid-cols-5">
                       {clothingList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -376,7 +395,7 @@ const Header = () => {
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
               <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
-                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out focus:text-gray-400 dark:hover:text-white dark:focus:text-white lg:px-2"
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out hover:text-gray-400 dark:hover:text-white dark:focus:text-white lg:px-2"
                   href="/#"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -410,7 +429,7 @@ const Header = () => {
                 >
                   <div className="flex px-6 py-5 lg:px-8 bg-white">
                     <div className=" grid gap-6 md:grid-cols-5">
-                    {accessoriesList.map(({ title, imageSrc, link }) => (
+                      {accessoriesList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
                             {title}
@@ -420,7 +439,7 @@ const Header = () => {
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
-                            <img 
+                            <img
                               src={imageSrc}
                               className="w-full h-full shadow-lg"
                               alt="From theblacktux.com"
