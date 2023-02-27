@@ -19,13 +19,13 @@ $(document).ready(function () {
 function Home() {
   const slides = [
     {
-      url: image3,
+      url: image2,
     },
     {
       url: image4,
     },
     {
-      url: image2,
+      url: image3,
     },
     {
       url: image5,
