@@ -109,7 +109,7 @@ const Header = () => {
       id: 2,
       title: "Sweaters",
       imageSrc:
-        "https://static.theblacktux.com/products/vests/navy-vest/1_08_CLBNS_3552_Ext_F_1812x1875.jpg?width=845&height=875",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI4t4nY_EZeaxN-EZ0FVoIuGw7ISewXV-IQ&usqp=CAU",
       link: "#",
     },
     {
@@ -359,7 +359,7 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="w-full h-full shadow-lg dark:shadow-black "
+                              className="w-full h-full sm:max-h-[350px] lg:max-h-[300px]  shadow-lg dark:shadow-black "
                               alt="From theblacktux.com"
                             />
                             <a href={link}>
@@ -472,6 +472,20 @@ const Header = () => {
                   </div>
                 </div>
               </li>
+              {/* <li> <a
+                  className="lg:px-10 flex flex-row items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out hover:text-gray-400 dark:hover:text-white dark:focus:text-white "
+                  href="/#"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  type="button"
+                  id="showroomsMenuButton"
+                  data-te-dropdown-toggle-ref
+                  aria-expanded="false"
+                  data-te-nav-link-ref
+                >
+                  Showrooms
+                  
+                </a></li> */}
             </ul>
           </div>
         </div>

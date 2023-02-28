@@ -62,10 +62,10 @@ function Home() {
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5  text-2xl p-2 bg-black/10 text-white cursor-pointer">
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 rounded-full text-2xl p-2 bg-white/30 text-gray-500 cursor-pointer">
             <BsChevronCompactLeft onClick={prevSlide} size={30} />
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5  text-2xl p-2 bg-black/10 text-white cursor-pointer">
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 rounded-full text-2xl p-2 bg-white/30 text-gray-500 cursor-pointer">
             <BsChevronCompactRight onClick={nextSlide} size={30} />
           </div>
         </div>
