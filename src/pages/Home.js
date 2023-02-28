@@ -55,10 +55,10 @@ function Home() {
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="w-full h-full bg-top bg-cover duration-75 text-center"
           >
-            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-600 to-orange-400">
+            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400">
               Style that suits you
             </h1>
-            <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-600 to-orange-400 lg:text-xl ">
+            <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400 lg:text-xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
@@ -86,7 +86,7 @@ function Home() {
                     data-mdb-ripple-color="light"
                   >
                     <img
-                      src="https://static.theblacktux.com/products/suits/gray-suit/1_2018_0326_TBT_Spring_Shot03_-31_w1_1812x1875.jpg?trim=0,186&width=461"
+                      src="https://static.theblacktux.com/products/tuxedos/Ocean%20Velvet%20Shawl%20Jacket%20Tuxedo/01_2019_0924_TBT_HC19_eComm_02_OceanVelvetShawl_097.jpeg?trim=0,186&width=461"
                       className="w-full h-full"
                       alt="Louvre"
                     />
@@ -98,7 +98,9 @@ function Home() {
                     </a>
                   </div>
 
-                  <h5 className="text-black font-bold mb-3">Sharp Wear </h5>
+                  <h5 className="text-black font-bold mb-3">
+                    Ocean Velvet Tuxedo{" "}
+                  </h5>
                   <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
                     <svg
                       className="w-4 h-4 mr-2"
@@ -122,7 +124,7 @@ function Home() {
                     data-mdb-ripple-color="light"
                   >
                     <img
-                      src="https://static.theblacktux.com/products/tuxedos/ruby-velvet-jacket-tuxedo/01_2017_0901_TBT_RubyVelvetJacket_3127_w1_1812x1875.jpg?trim=0,186&width=461"
+                      src="https://static.theblacktux.com/products/tuxedos/Light%20Blue%20Shawl%20Tuxedo/01_2019_0924_TBT_HC19_eComm_01_LightBlueShawl_044.jpg?trim=0,186&width=461"
                       className="w-full h-full"
                       alt="Louvre"
                     />
@@ -134,7 +136,9 @@ function Home() {
                     </a>
                   </div>
 
-                  <h5 className="text-black font-bold mb-3">Sharp Wear </h5>
+                  <h5 className="text-black font-bold mb-3">
+                    Light Blue Shawl Tuxedo{" "}
+                  </h5>
                   <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
                     <svg
                       className="w-4 h-4 mr-2"
@@ -170,7 +174,9 @@ function Home() {
                     </a>
                   </div>
 
-                  <h5 className="text-black font-bold mb-3">Sharp Wear </h5>
+                  <h5 className="text-black font-bold mb-3">
+                    Contrast Shawl Jacket Tuxedo
+                  </h5>
                   <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
                     <svg
                       className="w-4 h-4 mr-2"
@@ -195,7 +201,7 @@ function Home() {
                     data-mdb-ripple-color="light"
                   >
                     <img
-                      src="https://static.theblacktux.com/products/suits/light-grey-suit/1_161129_TBT_Ecom_Light_Gray_Suit_2_1262_w1_1812x1875.jpg?trim=0,186&width=461"
+                      src="https://static.theblacktux.com/products/suits/charcoal-suit/1_04_CS_1692_EXT_F_1812x1875.jpg?trim=0,186&width=461"
                       className="w-full h-full"
                       alt="Louvre"
                     />
@@ -207,7 +213,7 @@ function Home() {
                     </a>
                   </div>
 
-                  <h5 className="  font-bold mb-3">Exhibition in Paris</h5>
+                  <h5 className="  font-bold mb-3">Charcoal Suit</h5>
                   <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
                     <svg
                       className="w-4 h-4 mr-2"
@@ -232,7 +238,7 @@ function Home() {
                     data-mdb-ripple-color="light"
                   >
                     <img
-                      src="https://static.theblacktux.com/products/tuxedos/midnight-blue-tuxedo/1_2018_0326_TBT_Spring-Ecomm_Shot01_-2_w1_1812x1875.jpg?trim=0,186&width=461"
+                      src="https://static.theblacktux.com/products/suits/black-suit/1_161129_TBT_Ecom_Black_Suit_1_1587_w1_1812x1875.jpg?trim=0,186&width=461"
                       className="w-full h-full"
                       alt="Louvre"
                     />
@@ -244,7 +250,7 @@ function Home() {
                     </a>
                   </div>
 
-                  <h5 className="  font-bold mb-3">Stock market boom</h5>
+                  <h5 className="  font-bold mb-3">Black Suit</h5>
                   <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
                     <svg
                       className="w-4 h-4 mr-2"
@@ -294,7 +300,7 @@ function Home() {
       {/* <!-- Explanation --> */}
       <div className="container mt-4 text-center text-neutral-800 dark:text-neutral-200"></div>
       {/* <!-- Section: Design Block --> */}
-      <section className="mb-32 text-white text-center lg:text-left px-8">
+      <section className=" text-white text-center lg:text-left">
         <div className="block  shadow-lg bg-gradient-to-r from-gray-700 via-gray-900 to-gray-800">
           <div className="flex flex-wrap items-center">
             <div className="grow-0 shrink-0 basis-auto hidden lg:flex lg:w-6/12 xl:w-4/12">
@@ -309,12 +315,12 @@ function Home() {
                 <h2 className="text-3xl font-bold mb-6">
                   Do not miss any updates.
                   <br />
-                  <span className="text-yellow-500">
-                    Subscribe to the newsletter
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-600 to-orange-500">
+                    SIGN UP FOR WEEKLY NEWSLETTERS
                   </span>
                 </h2>
                 <p className="text-white mb-12">
-                  We will write rarely and only high-quality content.
+                  We will keep you posted on new products and great offers.
                 </p>
                 <div className="md:flex flex-row">
                   <input
@@ -324,7 +330,7 @@ function Home() {
                   />
                   <button
                     type="submit"
-                    className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase  shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    className="inline-block px-7 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium text-sm leading-snug uppercase  shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                   >
