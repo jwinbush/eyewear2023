@@ -275,7 +275,7 @@ const Header = () => {
                             {title}
                           </p>
                           <div
-                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat"
+                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat hover:animate-pulse"
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
@@ -344,7 +344,7 @@ const Header = () => {
                             {title}
                           </p>
                           <div
-                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat"
+                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat hover:animate-pulse"
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
@@ -409,7 +409,7 @@ const Header = () => {
                             {title}
                           </p>
                           <div
-                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat"
+                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat hover:animate-pulse"
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
