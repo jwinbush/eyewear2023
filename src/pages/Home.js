@@ -55,10 +55,10 @@ function Home() {
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="w-full h-full bg-top bg-cover duration-75 text-center"
           >
-            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-700">
+            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-600 to-orange-400">
               Style that suits you
             </h1>
-            <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-700 lg:text-xl ">
+            <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-600 to-orange-400 lg:text-xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
