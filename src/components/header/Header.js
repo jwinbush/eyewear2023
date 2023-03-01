@@ -1,8 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import watch from "../../assets/watch.png";
-
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //jQuery for navbar
 
@@ -57,6 +56,13 @@ $(document).ready(function () {
   });
 });
 
+function refreshPage() {
+  window.setTimeout( function() {
+    window.location.reload();
+  }, 0);
+}
+
+
 const Header = () => {
   //For suits & tuxedos ul list
   const suitsTuxedosList = [
@@ -65,7 +71,7 @@ const Header = () => {
       title: "New Arrivals",
       imageSrc:
         "https://static.theblacktux.com/products/suits/medium-blue-suit/2_10142022_BLACKTUX104649_3.4.jpg?width=845&height=875",
-      link: "#",
+      link: "/suits-tuxedos/new",
     },
     {
       id: 2,
@@ -147,7 +153,7 @@ const Header = () => {
     },
     {
       id: 2,
-      title: "Belts & Suspenders",
+      title: "Belts",
       imageSrc:
         "https://static.theblacktux.com/products/belts/black-belt/1_334_1812x1875.jpg?trim=0,186&width=461",
       link: "#",
@@ -168,7 +174,7 @@ const Header = () => {
     },
     {
       id: 5,
-      title: "Cufflinks & Studs",
+      title: "Cufflinks",
       imageSrc:
         "https://static.theblacktux.com/products/cufflinks-studs/gold-tone-pearl-cufflinks/JY_015_gold_pearl_0083_1812x1875.jpg?trim=0,186&width=461",
       link: "#",
@@ -268,7 +274,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-6 md:grid-cols-5">
+                    <div className=" grid gap-2 sm:grid-cols-2 md:gap-6 md:grid-cols-5 justify-center">
                       {suitsTuxedosList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -281,12 +287,12 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="w-full h-full shadow-lg sm:max-h-[350px] lg:h-[320px]"
+                              className="w-full h-full shadow-lg xs:max-h-[100px] sm:max-h-[210px] lg:h-[320px]"
                               alt="From theblacktux.com"
                             />
-                            <a href={link}>
+                            <Link to={link} onClick={refreshPage} >
                               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                            </a>
+                            </Link>
                           </div>
                           
                         </div>
@@ -337,7 +343,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-6 md:grid-cols-5">
+                    <div className=" grid gap-2 grid-cols-2 md:gap-6 md:grid-cols-5">
                       {clothingList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -350,7 +356,7 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="w-full h-full sm:max-h-[350px] lg:h-[320px]  shadow-lg dark:shadow-black "
+                              className="w-full h-full max-h-[160px] sm:max-h-[210px] lg:h-[320px]  shadow-lg dark:shadow-black "
                               alt="From theblacktux.com"
                             />
                             <a href={link}>
@@ -402,7 +408,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className="flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-6 md:grid-cols-6">
+                    <div className=" grid gap-2 grid-cols-2 md:gap-5 md:grid-cols-6">
                       {accessoriesList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -415,7 +421,7 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="w-full h-full shadow-lg sm:max-h-[350px] lg:h-[320px]"
+                              className="w-full h-full shadow-lg xs:max-h-[100px] sm:max-h-[210px] lg:h-[320px]"
                               alt="From theblacktux.com"
                             />
                             <a href={link}>

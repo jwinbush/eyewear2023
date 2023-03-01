@@ -1,13 +1,6 @@
-// import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import React, { useState } from "react";
+
 import $ from "jquery";
-import image2 from "../assets/image2.png";
-import image3 from "../assets/image3.png";
-import image4 from "../assets/image4.png";
-import image5 from "../assets/image5.png";
-import marriage from "../assets/marriage.png";
+import marriage from "../../assets/marriage.png";
 
 //jQuery scroll to top
 $(document).ready(function () {
@@ -16,59 +9,28 @@ $(document).ready(function () {
   });
 });
 
-function Home() {
-  const slides = [
-    {
-      url: image3,
-    },
-    {
-      url: image4,
-    },
-    {
-      url: image2,
-    },
-    {
-      url: image5,
-    },
-  ];
+function NewArrivals() {
+//   const slides = [
+//     {
+//       url: image3,
+//     },
+//     {
+//       url: image4,
+//     },
+//     {
+//       url: image2,
+//     },
+//     {
+//       url: image5,
+//     },
+//   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
 
   return (
     <div className="bg-white uppercase text-sm">
-      {/* <Header /> */}
+      
       <div id="mainBody">
-        <div className=" h-[780px] lg:h-[830px] w-full m-auto relative group">
-          <div
-            style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-            className="w-full h-full bg-top bg-cover duration-75 text-center"
-          >
-            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400">
-              Style that suits you
-            </h1>
-            <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400 lg:text-xl ">
-              Tuxedos and suits, for rent and for keeps.
-            </p>
-          </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 rounded-full text-2xl p-2 bg-white/30 text-gray-500 cursor-pointer">
-            <BsChevronCompactLeft onClick={prevSlide} size={30} />
-          </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 rounded-full text-2xl p-2 bg-white/30 text-gray-500 cursor-pointer">
-            <BsChevronCompactRight onClick={nextSlide} size={30} />
-          </div>
-        </div>
         {/* <!-- Container for demo purpose --> */}
         <div className="container my-24 px-6 mx-auto">
           {/* <!-- Section: Design Block --> */}
@@ -343,9 +305,9 @@ function Home() {
         </div>
       </section>
       {/* <!-- Section: Design Block --> */}
-      <Footer />
+      
     </div>
   );
 }
 
-export default Home;
+export default NewArrivals;
