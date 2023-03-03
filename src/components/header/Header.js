@@ -62,6 +62,30 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $("#logo").hover(function () {
+    $("#suitsMenu").slideUp(400);
+    $("#clothingMenu").slideUp(400);
+    $("#accessoriesMenu").slideUp(400);
+  });
+});
+
+$(document).ready(function () {
+  $("#showRoom").hover(function () {
+    $("#suitsMenu").slideUp(400);
+    $("#clothingMenu").slideUp(400);
+    $("#accessoriesMenu").slideUp(400);
+  });
+});
+
+$(document).ready(function () {
+  $("#joinNow").hover(function () {
+    $("#suitsMenu").slideUp(400);
+    $("#clothingMenu").slideUp(400);
+    $("#accessoriesMenu").slideUp(400);
+  });
+});
+
 $(".More").hover(function () {
   $(".Moreinfo").toggleClass("show");
 });
@@ -197,7 +221,8 @@ const Header = () => {
   ];
 
   return (
-    <div className="uppercase text-xs font-bold">
+    <div className="uppercase text-xs font-bold ">
+    <section></section>
       <div
         id="joinNow"
         className="justify-center flex bg-gradient-to-r from-gray-600 via-gray-900 to-gray-700 border-b border-gray-700 text-center py-1 text-xs text-white"
@@ -211,7 +236,7 @@ const Header = () => {
       </div>
       <div className=" px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
         <section className="justify-between flex">
-        <div className="text-xl py-1">
+        <div className="text-xl py-1" id="logo">
           <Link to="/" onClick={refreshPage}>Sharp Wear</Link>
         </div>
         <button
@@ -465,6 +490,7 @@ const Header = () => {
                     onClick={refreshPage}
                     className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out hover:text-gray-400 dark:hover:text-white dark:focus:text-white lg:px-2"
                     to="/locations"
+                    id="showRoom"
                     data-te-ripple-init
                     data-te-ripple-color="light"
                     type="button"

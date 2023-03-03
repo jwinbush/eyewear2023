@@ -46,7 +46,7 @@ function Home() {
   };
 
   return (
-    <div className="bg-white uppercase text-sm">
+    <div className="bg-white uppercase text-sm ">
       {/* <Header /> */}
       <div id="mainBody">
         <div className=" h-[780px] lg:h-[870px] w-full m-auto relative group">
