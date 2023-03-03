@@ -1,7 +1,7 @@
 import $ from "jquery";
 import marriage from "../../assets/marriage.png";
-import { Link } from "react-router-dom";
 import headimage from "../../assets/headerimage.png";
+import { Link } from "react-router-dom";
 
 //jQuery scroll to top
 $(document).ready(function () {
@@ -10,7 +10,7 @@ $(document).ready(function () {
   });
 });
 
-function NewArrivals() {
+function Tuxedos() {
   const list = [
     {
       id: 1,
@@ -168,7 +168,7 @@ function NewArrivals() {
               Shop the collection
             </p>
             <h1 class=" lg:mb-2 font-bold text-2xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black ">
-              Suits & Tuxedos
+              Tuxedos
             </h1>
             <p class="text-sm text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black lg:text-md ">
               Ranging from four different styles. Find the perfect suit for you.
@@ -180,31 +180,31 @@ function NewArrivals() {
           {/* <!-- Section: Design Block --> */}
           <section className="mb-32 text-gray-800 text-center">
             <h2 className="md:text-3xl text-black font-semibold mb-12 text-left ">
-              New Arrivals
+              Tuxedos
             </h2>
 
             <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 sm:grid-cols-2 sm:gap-4">
               {/* {suitsTuxedosList.map(({ title, imageSrc, link }) => (
-                        <div>
-                          <p className="block w-full pt-2 font-semibold uppercase">
-                            {title}
-                          </p>
-                          <div
-                            className="relative my-4 overflow-hidden bg-cover bg-no-repeat hover:animate-pulse"
-                            data-te-ripple-init
-                            data-te-ripple-color="light"
-                          >
-                            <img
-                              src={imageSrc}
-                              className="w-full h-full shadow-lg xs:max-h-[100px] sm:max-h-[210px] lg:h-[320px]"
-                              alt="From theblacktux.com"
-                            />
-                            <Link to={link} onClick={refreshPage}>
-                              <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                            </Link>
+                          <div>
+                            <p className="block w-full pt-2 font-semibold uppercase">
+                              {title}
+                            </p>
+                            <div
+                              className="relative my-4 overflow-hidden bg-cover bg-no-repeat hover:animate-pulse"
+                              data-te-ripple-init
+                              data-te-ripple-color="light"
+                            >
+                              <img
+                                src={imageSrc}
+                                className="w-full h-full shadow-lg xs:max-h-[100px] sm:max-h-[210px] lg:h-[320px]"
+                                alt="From theblacktux.com"
+                              />
+                              <Link to={link} onClick={refreshPage}>
+                                <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                              </Link>
+                            </div>
                           </div>
-                        </div>
-                      ))} */}
+                        ))} */}
               {list.map(({ title, imageSrc, link }) => (
                 <div className="mb-6 lg:mb-0">
                   <div>
@@ -326,4 +326,4 @@ function NewArrivals() {
   );
 }
 
-export default NewArrivals;
+export default Tuxedos;

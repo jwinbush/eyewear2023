@@ -1,7 +1,9 @@
+
 import $ from "jquery";
 import marriage from "../../assets/marriage.png";
-import { Link } from "react-router-dom";
 import headimage from "../../assets/headerimage.png";
+import { Link } from "react-router-dom";
+
 
 //jQuery scroll to top
 $(document).ready(function () {
@@ -10,7 +12,7 @@ $(document).ready(function () {
   });
 });
 
-function NewArrivals() {
+function Business() {
   const list = [
     {
       id: 1,
@@ -168,7 +170,7 @@ function NewArrivals() {
               Shop the collection
             </p>
             <h1 class=" lg:mb-2 font-bold text-2xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black ">
-              Suits & Tuxedos
+              Business Attire
             </h1>
             <p class="text-sm text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black lg:text-md ">
               Ranging from four different styles. Find the perfect suit for you.
@@ -180,7 +182,7 @@ function NewArrivals() {
           {/* <!-- Section: Design Block --> */}
           <section className="mb-32 text-gray-800 text-center">
             <h2 className="md:text-3xl text-black font-semibold mb-12 text-left ">
-              New Arrivals
+             Business
             </h2>
 
             <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 sm:grid-cols-2 sm:gap-4">
@@ -325,5 +327,4 @@ function NewArrivals() {
     </div>
   );
 }
-
-export default NewArrivals;
+export default Business;

@@ -1,7 +1,8 @@
 import React from "react";
 import $ from "jquery";
 import watch from "../../assets/watch.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { FaSearchLocation, FaTimes } from "react-icons/fa";
 
 //jQuery for navbar
 
@@ -13,10 +14,15 @@ import { Link } from 'react-router-dom';
 //   }
 // });
 
+$(function () {
+  $("#x").click(function () {
+    $("#joinNow").slideUp(300);
+  });
+});
 // Navbar buttons
 $(function () {
   $("#list").click(function () {
-    $("#navbarSupportedContentQ").animate({ width: "toggle" }, 350); //slides content onclick
+    $("#navbarSupportedContentQ").animate({ width: "toggle" }, 300); //slides content onclick
     $("#suitsMenu").hide();
     $("#clothingMenu").hide();
     $("#accessoriesMenu").hide();
@@ -56,12 +62,15 @@ $(document).ready(function () {
   });
 });
 
+$(".More").hover(function () {
+  $(".Moreinfo").toggleClass("show");
+});
+
 function refreshPage() {
-  window.setTimeout( function() {
+  window.setTimeout(function () {
     window.location.reload();
   }, 0);
 }
-
 
 const Header = () => {
   //For suits & tuxedos ul list
@@ -78,28 +87,28 @@ const Header = () => {
       title: "Business",
       imageSrc:
         "https://static.theblacktux.com/products/suits/black-suit/5_161129_TBT_Ecom_Black_Suit_1_1608_w1_1812x1875.jpg",
-      link: "#",
+      link: "/suits-tuxedos/business",
     },
     {
       id: 3,
       title: "Tuxedos",
       imageSrc:
         "https://static.theblacktux.com/products/tuxedos/marigold-shawl-jacket-tuxedo/03_2018_0907_TBT_HC18_MarigoldShawlJacketTux_15_V2_w1_1812x1875.JPG?width=845&height=875",
-      link: "#",
+      link: "/suits-tuxedos/tuxedo",
     },
     {
       id: 4,
       title: "Formal events",
       imageSrc:
         "https://static.theblacktux.com/products/tuxedos/notched-lapel-tuxedo/2_02_NLT_0706_Ext_F_1812x1875.jpg?width=845&height=875",
-      link: "#",
+      link: "/suits-tuxedos/formal",
     },
     {
       id: 5,
       title: "Wedding",
       imageSrc:
         "https://static.theblacktux.com/products/tuxedos/Light%20Blue%20Shawl%20Tuxedo/01_2019_0924_TBT_HC19_eComm_01_LightBlueShawl_044.jpg?width=845&height=875",
-      link: "#",
+      link: "/suits-tuxedos/wedding",
     },
   ];
 
@@ -182,20 +191,23 @@ const Header = () => {
     {
       id: 6,
       title: "Watches",
-      imageSrc:
-        watch,
+      imageSrc: watch,
       link: "#",
     },
   ];
 
   return (
     <div className="uppercase text-xs font-bold">
-      <div className="bg-gradient-to-r from-gray-700 via-gray-900 to-gray-800 border-b border-gray-700 text-center py-2 text-xs text-white">
+      <div
+        id="joinNow"
+        className="justify-center flex bg-gradient-to-r from-gray-600 via-gray-900 to-gray-700 border-b border-gray-700 text-center py-1 text-xs text-white"
+      >
         <h1>
           <a href="/#" className="cursor-pointer">
             Join for exclusive offers 🎖️
           </a>
         </h1>
+        <FaTimes id="x" className="cursor-pointer" />
       </div>
       <nav
         className="relative flex w-full items-center justify-between bg-black py-2 text-white shadow-lg lg:flex-wrap lg:justify-start border-b border-gray-700"
@@ -273,8 +285,8 @@ const Header = () => {
                   aria-labelledby="dropdownMenuButtonU"
                   data-te-dropdown-menu-ref
                 >
-                  <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-2 sm:grid-cols-2 md:gap-6 md:grid-cols-5 justify-center">
+                  <div className=" flex px-4 py-5 lg:px-8 bg-white">
+                    <div className=" grid gap-5 lg:grid-cols-5 justify-center">
                       {suitsTuxedosList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -287,14 +299,13 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="w-full h-full shadow-lg xs:max-h-[100px] sm:max-h-[210px] lg:h-[320px]"
+                              className="flex w-full h-full shadow-lg dark:shadow-black "
                               alt="From theblacktux.com"
                             />
-                            <Link to={link} onClick={refreshPage} >
+                            <Link to={link} onClick={refreshPage}>
                               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                             </Link>
                           </div>
-                          
                         </div>
                       ))}
                     </div>
@@ -304,11 +315,7 @@ const Header = () => {
             </ul>
 
             <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
-              <li
-                className="static lg:px-8"
-                data-te-nav-item-ref
-                data-te-dropdown-ref
-              >
+              <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
                 <a
                   className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out lg:px-2 hover:text-gray-400"
                   href="/#"
@@ -343,7 +350,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-2 grid-cols-2 md:gap-6 md:grid-cols-5">
+                    <div className=" grid gap-5 lg:grid-cols-5">
                       {clothingList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -356,14 +363,13 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="w-full h-full max-h-[160px] sm:max-h-[210px] lg:h-[320px]  shadow-lg dark:shadow-black "
+                              className="flex w-full h-full shadow-lg dark:shadow-black "
                               alt="From theblacktux.com"
                             />
-                            <a href={link}>
+                            <Link to={link}>
                               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                            </a>
+                            </Link>
                           </div>
-                          
                         </div>
                       ))}
                     </div>
@@ -408,7 +414,7 @@ const Header = () => {
                   data-te-dropdown-menu-ref
                 >
                   <div className="flex px-6 py-5 lg:px-8 bg-white">
-                    <div className=" grid gap-2 grid-cols-2 md:gap-5 md:grid-cols-6">
+                    <div className=" grid gap-5 lg:grid-cols-6">
                       {accessoriesList.map(({ title, imageSrc, link }) => (
                         <div>
                           <p className="block w-full pt-2 font-semibold uppercase">
@@ -421,34 +427,37 @@ const Header = () => {
                           >
                             <img
                               src={imageSrc}
-                              className="w-full h-full shadow-lg xs:max-h-[100px] sm:max-h-[210px] lg:h-[320px]"
+                              className="flex w-full h-full lg:h-[325px] shadow-lg dark:shadow-black "
                               alt="From theblacktux.com"
                             />
-                            <a href={link}>
+                            <Link to={link}>
                               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden  bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                            </a>
+                            </Link>
                           </div>
-                        
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
               </li>
-              {/* <li> <a
-                  className="lg:px-10 flex flex-row items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out hover:text-gray-400 dark:hover:text-white dark:focus:text-white "
-                  href="/#"
+            </ul>
+            <ul className="mr-auto flex flex-row" data-te-navbar-nav-ref>
+              <li className="static" data-te-nav-item-ref data-te-dropdown-ref>
+                <Link
+                  onClick={refreshPage}
+                  className="flex items-center whitespace-nowrap py-2 pr-2 transition duration-150 ease-in-out hover:text-gray-400 dark:hover:text-white dark:focus:text-white lg:px-2"
+                  to="/locations"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   type="button"
-                  id="showroomsMenuButton"
                   data-te-dropdown-toggle-ref
                   aria-expanded="false"
                   data-te-nav-link-ref
                 >
                   Showrooms
-                  
-                </a></li> */}
+                  <FaSearchLocation className="ml-2" />
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

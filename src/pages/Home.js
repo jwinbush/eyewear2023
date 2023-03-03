@@ -1,5 +1,4 @@
 // import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import React, { useState } from "react";
 import $ from "jquery";
@@ -50,12 +49,12 @@ function Home() {
     <div className="bg-white uppercase text-sm">
       {/* <Header /> */}
       <div id="mainBody">
-        <div className=" h-[780px] lg:h-[830px] w-full m-auto relative group">
+        <div className=" h-[780px] lg:h-[840px] w-full m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="w-full h-full bg-top bg-cover duration-75 text-center"
           >
-            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400">
+            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-600 to-orange-400">
               Style that suits you
             </h1>
             <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400 lg:text-xl ">
@@ -343,7 +342,6 @@ function Home() {
         </div>
       </section>
       {/* <!-- Section: Design Block --> */}
-      <Footer />
     </div>
   );
 }
