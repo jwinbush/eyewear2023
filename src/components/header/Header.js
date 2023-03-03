@@ -209,7 +209,7 @@ const Header = () => {
         </h1>
         <FaTimes id="x" className="cursor-pointer" />
       </div>
-      <div className=" px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-between bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
+      <div className=" px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
         <section className="justify-between flex">
         <div className="text-xl py-1">
           <Link to="/" onClick={refreshPage}>Sharp Wear</Link>
