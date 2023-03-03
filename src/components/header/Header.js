@@ -2,7 +2,12 @@ import React from "react";
 import $ from "jquery";
 import watch from "../../assets/watch.png";
 import { Link } from "react-router-dom";
-import { FaSearchLocation, FaTimes } from "react-icons/fa";
+import {
+  FaSearchLocation,
+  FaShoppingBag,
+  FaTimes,
+  FaUser,
+} from "react-icons/fa";
 
 //jQuery for navbar
 
@@ -222,10 +227,9 @@ const Header = () => {
 
   return (
     <div className="uppercase text-xs font-bold ">
-    <section></section>
       <div
         id="joinNow"
-        className="justify-center flex bg-gradient-to-r from-gray-600 via-gray-900 to-gray-700 border-b border-gray-700 text-center py-1 text-xs text-white"
+        className="justify-center flex bg-gradient-to-r from-white via-gray-300 to-white border-b border-gray-700 text-center py-1 text-xs text-black"
       >
         <h1>
           <a href="/#" className="cursor-pointer">
@@ -236,36 +240,38 @@ const Header = () => {
       </div>
       <div className=" px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
         <section className="justify-between flex">
-        <div className="text-xl py-1" id="logo">
-          <Link to="/" onClick={refreshPage}>Sharp Wear</Link>
-        </div>
-        <button
-          className="border-0 text-xl leading-none transition-shadow duration-150 ease-in-outtext-white lg:hidden"
-          type="button"
-          data-te-collapse-init
-          data-te-target="#navbarSupportedContentQ"
-          aria-controls="navbarSupportedContentQ"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          id="list"
-        >
-          <span className="[&>svg]:w-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="h-8 w-8"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </span>
-        </button>
+          <div className="text-xl py-1" id="logo">
+            <Link to="/" onClick={refreshPage}>
+              SharpWear
+            </Link>
+          </div>
+          <button
+            className="border-0 text-xl leading-none transition-shadow duration-150 ease-in-outtext-white lg:hidden"
+            type="button"
+            data-te-collapse-init
+            data-te-target="#navbarSupportedContentQ"
+            aria-controls="navbarSupportedContentQ"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="list"
+          >
+            <span className="[&>svg]:w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="h-8 w-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </span>
+          </button>
         </section>
         <nav data-te-navbar-ref>
           {/* <div className="border-0 py-3 text-xl flex leading-none transition-shadow duration-150 ease-in-outtext-white">
@@ -273,7 +279,7 @@ const Header = () => {
         </div> */}
           <div className="px-6">
             <div
-              className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+              className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto gap-6"
               id="navbarSupportedContentQ"
               data-te-collapse-item
             >
@@ -503,6 +509,24 @@ const Header = () => {
                   </Link>
                 </li>
               </ul>
+              <section>
+                <ul className="lg:flex flex-row gap-8">
+                  <li>
+                  <div className=" text-lg py-1">
+                    <Link to="/login" onClick={refreshPage}>
+                      <FaUser />
+                    </Link>
+                  </div>
+                  </li>
+                  <li>
+                  <div className=" text-lg py-1">
+                    <Link to="/shopping-cart" onClick={refreshPage}>
+                      <FaShoppingBag />
+                    </Link>
+                  </div>
+                  </li>
+                </ul>
+              </section>
             </div>
           </div>
         </nav>

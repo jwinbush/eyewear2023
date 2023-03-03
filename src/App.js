@@ -9,6 +9,8 @@ import Tuxedos from "./pages/suits-tuxedos/Tuxedos";
 import FormalEvents from "./pages/suits-tuxedos/FormalEvents";
 import Wedding from "./pages/suits-tuxedos/Wedding";
 import GoogleMaps from "./pages/locations/GoogleMaps";
+import Login from "./pages/user/Login";
+import SignUp from "./pages/user/SignUp";
 
 
 function App() {
@@ -53,6 +55,17 @@ function App() {
            exact
            element={<GoogleMaps/>}
        />
+          <Route
+           path='/login'
+           exact
+           element={<Login/>}
+       />
+         <Route
+           path='/signup'
+           exact
+           element={<SignUp/>}
+       />
+      
    </Routes>
    <Footer/>
     </BrowserRouter>

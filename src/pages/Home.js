@@ -54,10 +54,10 @@ function Home() {
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="w-full h-full bg-top bg-cover duration-75 text-center"
           >
-            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-red-700">
+            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-red-700">
               Style that suits you
             </h1>
-            <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400 lg:text-xl ">
+            <p class="text-xs font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400 lg:text-xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
@@ -76,7 +76,7 @@ function Home() {
               OUR MOST-WANTED STYLES
             </h2>
 
-            <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 sm:grid-cols-2 sm:gap-4">
+            <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 grid-cols-2 gap-4">
               <div className="mb-6 lg:mb-0">
                 <div>
                   <div

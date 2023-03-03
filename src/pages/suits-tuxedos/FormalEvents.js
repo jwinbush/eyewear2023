@@ -183,7 +183,7 @@ function FormalEvents() {
               Formal
             </h2>
 
-            <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 sm:grid-cols-2 sm:gap-4">
+            <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 grid-cols-2 gap-4">
               {/* {suitsTuxedosList.map(({ title, imageSrc, link }) => (
                           <div>
                             <p className="block w-full pt-2 font-semibold uppercase">
