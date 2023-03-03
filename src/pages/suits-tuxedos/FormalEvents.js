@@ -162,15 +162,15 @@ function FormalEvents() {
             style={{
               backgroundImage: `url(${headimage})`,
             }}
-            className="w-full h-full bg-top bg-cover duration-75 text-left pl-28"
+            className="w-full h-full bg-top bg-cover duration-75 text-left  pl-6 lg:pl-28"
           >
-            <p class=" pt-[10px] lg:pt-[70px] mb-2 text-sm text-gray-500 lg:text-md ">
+            <p class=" pt-[10px] lg:pt-[70px] mb-2 text-xs lg:text-sm text-gray-500 lg:text-md ">
               Shop the collection
             </p>
-            <h1 class=" lg:mb-2 font-bold text-2xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black ">
+            <h1 class=" lg:mb-2 font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black ">
               Formal Wear
             </h1>
-            <p class="text-sm text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black lg:text-md ">
+            <p class="lg:text-sm text-xs lg:text-black lg:text-md lg:visible invisible">
               Ranging from four different styles. Find the perfect suit for you.
             </p>
           </div>
@@ -256,7 +256,7 @@ function FormalEvents() {
         id="btn-back-to-top"
         data-te-ripple-init
         data-te-ripple-color="light"
-        className="bg-black z-50 fixed bottom-5 right-5 inline-block p-2 uppercase leading-normal text-white transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0"
+        className="bg-black z-50 fixed rounded-full bottom-5 right-5 inline-block p-2 uppercase leading-normal text-white transition duration-150 ease-in-out"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -49,23 +49,23 @@ function Home() {
     <div className="bg-white uppercase text-sm ">
       {/* <Header /> */}
       <div id="mainBody">
-        <div className=" h-[780px] lg:h-[870px] w-full m-auto relative group">
+        <div className=" h-[800px] lg:h-[870px] w-full m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="w-full h-full bg-top bg-cover duration-75 text-center"
           >
-            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-600 to-orange-400">
+            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-3xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-red-700">
               Style that suits you
             </h1>
             <p class="text-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400 lg:text-xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 rounded-full text-2xl p-2 bg-white/30 text-gray-500 cursor-pointer">
-            <BsChevronCompactLeft onClick={prevSlide} size={30} />
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 rounded-full lg:text-3xl text-2xl p-2 bg-white/20 text-gray-600 cursor-pointer w-10 h-10 lg:w-12 lg:h-12">
+            <BsChevronCompactLeft onClick={prevSlide} />
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 rounded-full text-2xl p-2 bg-white/30 text-gray-500 cursor-pointer">
-            <BsChevronCompactRight onClick={nextSlide} size={30} />
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 rounded-full lg:text-3xl text-2xl p-2 bg-white/20 text-gray-600 cursor-pointer w-10 h-10 lg:w-12 lg:h-12">
+            <BsChevronCompactRight onClick={nextSlide} />
           </div>
         </div>
         {/* <!-- Container for demo purpose --> */}
@@ -276,7 +276,7 @@ function Home() {
         id="btn-back-to-top"
         data-te-ripple-init
         data-te-ripple-color="light"
-        className="bg-black z-50 fixed bottom-5 right-5 inline-block p-2 uppercase leading-normal text-white transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0"
+        className="bg-black z-50 fixed rounded-full bottom-5 right-5 inline-block p-2 uppercase leading-normal text-white transition duration-150 ease-in-out"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
