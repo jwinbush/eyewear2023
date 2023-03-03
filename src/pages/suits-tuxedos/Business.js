@@ -1,9 +1,7 @@
-
 import $ from "jquery";
 import marriage from "../../assets/marriage.png";
 import headimage from "../../assets/headerimage.png";
 import { Link } from "react-router-dom";
-
 
 //jQuery scroll to top
 $(document).ready(function () {
@@ -182,7 +180,7 @@ function Business() {
           {/* <!-- Section: Design Block --> */}
           <section className="mb-32 text-gray-800 text-center">
             <h2 className="md:text-3xl text-black font-semibold mb-12 text-left ">
-             Business
+              Business
             </h2>
 
             <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 sm:grid-cols-2 sm:gap-4">
