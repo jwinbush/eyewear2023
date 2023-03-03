@@ -76,7 +76,7 @@ function Home() {
               OUR MOST-WANTED STYLES
             </h2>
 
-            <div className="grid lg:grid-cols-5 lg:gap-6 xl:gap-x-12 grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-5 md:grid-cols-4 lg:gap-6 xl:gap-x-12 grid-cols-2 gap-4">
               <div className="mb-6 lg:mb-0">
                 <div>
                   <div

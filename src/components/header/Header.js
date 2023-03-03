@@ -323,7 +323,7 @@ const Header = () => {
                     data-te-dropdown-menu-ref
                   >
                     <div className=" flex px-4 py-5 lg:px-8 bg-white">
-                      <div className=" grid gap-5 lg:grid-cols-5 justify-center">
+                      <div className=" grid gap-5 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 justify-center">
                         {suitsTuxedosList.map(({ title, imageSrc, link }) => (
                           <div>
                             <p className="block w-full pt-2 font-semibold uppercase">
@@ -391,7 +391,7 @@ const Header = () => {
                     data-te-dropdown-menu-ref
                   >
                     <div className=" flex px-6 py-5 lg:px-8 bg-white">
-                      <div className=" grid gap-5 lg:grid-cols-5">
+                      <div className=" grid gap-5 lg:grid-cols-5 md:grid-cols-3 grid-cols-2">
                         {clothingList.map(({ title, imageSrc, link }) => (
                           <div>
                             <p className="block w-full pt-2 font-semibold uppercase">
@@ -459,7 +459,7 @@ const Header = () => {
                     data-te-dropdown-menu-ref
                   >
                     <div className="flex px-6 py-5 lg:px-8 bg-white">
-                      <div className=" grid gap-5 lg:grid-cols-6">
+                      <div className=" grid gap-5 lg:grid-cols-6 md:grid-cols-3 grid-cols-2">
                         {accessoriesList.map(({ title, imageSrc, link }) => (
                           <div>
                             <p className="block w-full pt-2 font-semibold uppercase">
