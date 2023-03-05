@@ -197,10 +197,13 @@ function Home() {
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             className="font-Streamster normal-case w-full h-full bg-top bg-cover duration-75 text-center tracking-wider"
           >
-            <h1 id="mainText"  className=" pt-[250px] lg:pt-[670px] mb-2	font-extrabold text-5xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700">
+            <h1
+              id="mainText"
+              className=" pt-[250px] lg:pt-[670px] mb-2	font-extrabold text-5xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700"
+            >
               Style that suits you
             </h1>
-            <p  className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700 lg:text-3xl ">
+            <p className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700 lg:text-3xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
@@ -454,11 +457,11 @@ function Home() {
             </div>
             <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
               <div className="px-6 py-12 md:px-12">
-                <h2 className="text-3xl font-bold mb-6">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                   Do not miss any updates.
                   <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-600 to-orange-500">
-                    SIGN UP FOR WEEKLY NEWSLETTERS
+                  <span className="normal-case font-Streamster text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700">
+                    Sign up for weekly newsletters.
                   </span>
                 </h2>
                 <p className="text-white mb-12">
@@ -472,7 +475,7 @@ function Home() {
                   />
                   <button
                     type="submit"
-                    className="inline-block px-7 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium text-sm leading-snug uppercase  shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    className="normal-case lg:text-3xl font-Streamster inline-block px-7 py-3 bg-gradient-to-r from-yellow-300 to-yellow-700  text-white font-medium text-xl leading-snug  shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                   >

@@ -242,7 +242,7 @@ const Header = () => {
       </div>
       <div id="mainNav" className="px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
         <section className="justify-between flex">
-          <div className=" text-2xl py-1 font-Streamster normal-case text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700" id="logo">
+          <div className="  text-2xl lg:text-3xl py-1 font-Streamster normal-case text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700" id="logo">
             <Link to="/" onClick={refreshPage}>
               SharpWear
             </Link>
