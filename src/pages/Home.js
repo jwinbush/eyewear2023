@@ -199,11 +199,14 @@ function Home() {
           >
             <h1
               id="mainText"
-              className=" pt-[250px] lg:pt-[640px] pb-8	font-extrabold text-5xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700"
+              className=" pt-[250px] lg:pt-[640px] pb-8	font-extrabold text-[3.5rem] lg:text-8xl bg-gradient-to-r bg-clip-text  text-transparent 
+              from-yellow-400 via-yellow-700 to-yellow-300
+              animate-text"
             >
               Style that suits you
             </h1>
-            <p className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700 lg:text-3xl ">
+            <p className="text-2xl  text-white
+             lg:text-3xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
@@ -452,7 +455,7 @@ function Home() {
               <img
                 src={marriage}
                 alt="Trendy Pants and Shoes"
-                className="w-fullg"
+                className="w-full"
               />
             </div>
             <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
