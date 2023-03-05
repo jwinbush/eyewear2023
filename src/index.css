@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: "Thundergood";
+    src: url("./assets/fonts/Thundergood.ttf");
+    font-family: "Streamster";
+    src: url("./assets/fonts/Streamster.ttf");
+}

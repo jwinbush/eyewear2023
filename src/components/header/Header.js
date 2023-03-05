@@ -1,6 +1,7 @@
 import React from "react";
 import $ from "jquery";
-import watch from "../../assets/watch.png";
+import "./header.css";
+import watch from "../../assets/images/watch.png";
 import { Link } from "react-router-dom";
 import {
   FaSearchLocation,
@@ -39,6 +40,7 @@ $(document).ready(function () {
     $("#clothingMenu").fadeOut(300);
     $("#accessoriesMenu").fadeOut(300);
     $("#suitsMenu").slideDown("medium");
+    $(this).attr('#darkBackground');
   });
   $("#suitsMenu").mouseleave(function () {
     $("#suitsMenu").slideUp(400);
@@ -229,7 +231,7 @@ const Header = () => {
     <div className="uppercase text-xs font-bold ">
       <div
         id="joinNow"
-        className="justify-center flex bg-gradient-to-r from-white via-gray-300 to-white border-b border-gray-700 text-center py-1 text-xs text-black"
+        className="justify-center flex bg-gradient-to-r from-gray-300 via-white to-gray-300 border-b border-gray-800 text-center py-1 text-xs text-black"
       >
         <h1>
           <a href="/#" className="cursor-pointer">
@@ -238,9 +240,9 @@ const Header = () => {
         </h1>
         <FaTimes id="x" className="cursor-pointer" />
       </div>
-      <div className=" px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
+      <div id="mainNav" className="px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
         <section className="justify-between flex">
-          <div className="text-xl py-1" id="logo">
+          <div className=" text-2xl py-1 font-Streamster normal-case text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700" id="logo">
             <Link to="/" onClick={refreshPage}>
               SharpWear
             </Link>
@@ -273,6 +275,7 @@ const Header = () => {
             </span>
           </button>
         </section>
+        <div id="darkBackground"></div>
         <nav data-te-navbar-ref>
           {/* <div className="border-0 py-3 text-xl flex leading-none transition-shadow duration-150 ease-in-outtext-white">
           <h1>Hello</h1>

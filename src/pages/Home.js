@@ -2,11 +2,11 @@
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import React, { useState } from "react";
 import $ from "jquery";
-import image2 from "../assets/image2.png";
-import image3 from "../assets/image3.png";
-import image4 from "../assets/image4.png";
-import image5 from "../assets/image5.png";
-import marriage from "../assets/marriage.png";
+import image2 from "../assets/images/image2.png";
+import image3 from "../assets/images/image3.png";
+import image4 from "../assets/images/image4.png";
+import image5 from "../assets/images/image5.png";
+import marriage from "../assets/images/marriage.png";
 
 //jQuery scroll to top
 $(document).ready(function () {
@@ -31,6 +31,149 @@ function Home() {
     },
   ];
 
+  const mostWanted = [
+    {
+      id: 1,
+      title: "New Arrivals",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010154_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/new",
+    },
+    {
+      id: 2,
+      title: "Business",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010624_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/business",
+    },
+    {
+      id: 3,
+      title: "Tuxedos",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15014321_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/tuxedo",
+    },
+    {
+      id: 4,
+      title: "Formal events",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010615_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/formal",
+    },
+    {
+      id: 5,
+      title: "Wedding",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010648_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/wedding",
+    },
+    {
+      id: 6,
+      title: "New Arrivals",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15014327_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/new",
+    },
+    {
+      id: 7,
+      title: "Business",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15015273_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/business",
+    },
+    {
+      id: 8,
+      title: "Tuxedos",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15011416_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/tuxedo",
+    },
+    {
+      id: 9,
+      title: "Formal events",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010685_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/formal",
+    },
+    {
+      id: 10,
+      title: "Wedding",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15015805_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/wedding",
+    },
+    {
+      id: 11,
+      title: "New Arrivals",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010154_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/new",
+    },
+    {
+      id: 12,
+      title: "Business",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010925_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/business",
+    },
+    {
+      id: 13,
+      title: "Tuxedos",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15012094_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/tuxedo",
+    },
+    {
+      id: 14,
+      title: "Formal events",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15014884_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/formal",
+    },
+    {
+      id: 15,
+      title: "Wedding",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010677_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/wedding",
+    },
+    {
+      id: 16,
+      title: "New Arrivals",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15010154_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/new",
+    },
+    {
+      id: 17,
+      title: "Business",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15012081_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/business",
+    },
+    {
+      id: 18,
+      title: "Tuxedos",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15016676_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/tuxedo",
+    },
+    {
+      id: 19,
+      title: "Formal events",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15013415_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/formal",
+    },
+    {
+      id: 20,
+      title: "Wedding",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15012631_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/suits-tuxedos/wedding",
+    },
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -52,12 +195,12 @@ function Home() {
         <div className=" h-[800px] lg:h-[870px] w-full m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-            className="w-full h-full bg-top bg-cover duration-75 text-center"
+            className="font-Streamster normal-case w-full h-full bg-top bg-cover duration-75 text-center tracking-wider"
           >
-            <h1 class=" pt-[250px] lg:pt-[670px] mb-2 font-extrabold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-red-700">
+            <h1 id="mainText"  className=" pt-[250px] lg:pt-[670px] mb-2	font-extrabold text-5xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700">
               Style that suits you
             </h1>
-            <p class="text-xs font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-600 to-orange-400 lg:text-xl ">
+            <p  className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700 lg:text-3xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>

@@ -1,7 +1,7 @@
 import $ from "jquery";
-import marriage from "../../assets/marriage.png";
+import marriage from "../../assets/images/marriage.png";
 import { Link } from "react-router-dom";
-import headimage from "../../assets/headerimage.png";
+import headimage from "../../assets/images/headerimage.png";
 
 //jQuery scroll to top
 $(document).ready(function () {
@@ -164,13 +164,13 @@ function NewArrivals() {
             }}
             className="w-full h-full bg-top bg-cover duration-75 text-left  pl-6 lg:pl-28"
           >
-            <p class=" pt-[10px] lg:pt-[70px] mb-2 text-xs lg:text-sm text-gray-500 lg:text-md ">
+            <p  className=" pt-[10px] lg:pt-[70px] mb-2 text-xs lg:text-sm text-gray-500 lg:text-md ">
               Shop the collection
             </p>
-            <h1 class=" lg:mb-2 font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black ">
+            <h1  className=" lg:mb-2 font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-black ">
               New Suits & Tuxedos
             </h1>
-            <p class="lg:text-sm text-xs lg:text-black lg:text-md lg:visible invisible">
+            <p  className="lg:text-sm text-xs lg:text-black lg:text-md lg:visible invisible">
               Ranging from four different styles. Find the perfect suit for you.
             </p>
           </div>
@@ -209,7 +209,7 @@ function NewArrivals() {
                 <div className="mb-6 lg:mb-0">
                   <div>
                     <div
-                      className="relative overflow-hidden bg-no-repeat bg-cover ripple hover:animate-pulse mb-6"
+                      className="relative overflow-hidden  bg-no-repeat bg-cover ripple hover:animate-pulse mb-6"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="light"
                     >
