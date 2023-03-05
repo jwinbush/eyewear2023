@@ -11,6 +11,7 @@ import Wedding from "./pages/suits-tuxedos/Wedding";
 import GoogleMaps from "./pages/locations/GoogleMaps";
 import Login from "./pages/user/Login";
 import SignUp from "./pages/user/SignUp";
+import Cart from "./pages/cart/ShoppingCart";
 
 
 function App() {
@@ -64,6 +65,11 @@ function App() {
            path='/signup'
            exact
            element={<SignUp/>}
+       />
+           <Route
+           path='/shopping-cart'
+           exact
+           element={<Cart/>}
        />
       
    </Routes>

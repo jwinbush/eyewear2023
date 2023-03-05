@@ -199,11 +199,11 @@ function Home() {
           >
             <h1
               id="mainText"
-              className=" pt-[250px] lg:pt-[670px] mb-2	font-extrabold text-5xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700"
+              className=" pt-[250px] lg:pt-[640px] pb-8	font-extrabold text-5xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700"
             >
               Style that suits you
             </h1>
-            <p className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700 lg:text-3xl ">
+            <p className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-700 lg:text-3xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
@@ -282,7 +282,7 @@ function Home() {
                   </div>
 
                   <h5 className="text-black font-bold mb-3">
-                    Light Blue Shawl Tuxedo{" "}
+                    Light Blue Shawl Tuxedo
                   </h5>
                   <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
                     <svg
