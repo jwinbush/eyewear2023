@@ -231,7 +231,7 @@ const Header = () => {
     <div className="uppercase text-xs font-bold ">
       <div
         id="joinNow"
-        className="font-Posterman text-[0.9rem] justify-center flex bg-gradient-to-r from-gray-300 via-white to-gray-300 border-b border-gray-800 text-center py-1 text-black"
+        className="font-Posterman lg:text-[0.9rem] text-xs justify-center flex bg-gradient-to-r from-gray-300 via-white to-gray-300 border-b border-gray-800 text-center py-1 text-black"
       >
         <h1>
           <a href="/#" className="cursor-pointer">
