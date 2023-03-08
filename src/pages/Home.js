@@ -101,77 +101,7 @@ function Home() {
       imageSrc:
         "https://i8.amplience.net/i/indochino/15015805_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
       link: "/suits-tuxedos/wedding",
-    },
-    {
-      id: 11,
-      title: "New Arrivals",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15010154_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/new",
-    },
-    {
-      id: 12,
-      title: "Business",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15010925_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/business",
-    },
-    {
-      id: 13,
-      title: "Tuxedos",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15012094_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/tuxedo",
-    },
-    {
-      id: 14,
-      title: "Formal events",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15014884_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/formal",
-    },
-    {
-      id: 15,
-      title: "Wedding",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15010677_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/wedding",
-    },
-    {
-      id: 16,
-      title: "New Arrivals",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15010154_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/new",
-    },
-    {
-      id: 17,
-      title: "Business",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15012081_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/business",
-    },
-    {
-      id: 18,
-      title: "Tuxedos",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15016676_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/tuxedo",
-    },
-    {
-      id: 19,
-      title: "Formal events",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15013415_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/formal",
-    },
-    {
-      id: 20,
-      title: "Wedding",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15012631_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/wedding",
-    },
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
