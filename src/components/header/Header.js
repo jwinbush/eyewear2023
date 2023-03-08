@@ -228,7 +228,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="uppercase text-xs font-bold ">
+    <div className="uppercase text-xs">
       <div
         id="joinNow"
         className="font-Posterman lg:text-[0.9rem] text-xs justify-center flex bg-gradient-to-r from-gray-300 via-white to-gray-300 border-b border-gray-800 text-center py-1 text-black"

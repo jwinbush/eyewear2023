@@ -125,7 +125,7 @@ function Home() {
         <div className=" h-[800px] lg:h-[870px] w-full m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-            className="font-Streamster normal-case w-full h-full bg-top bg-cover duration-75 text-center tracking-wider"
+            className="font-Streamster normal-case w-full h-full bg-top bg-cover duration-75 text-center"
           >
             <h1
               id="mainText"
