@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+    font-family: "Posterman";
+}
+
 @font-face {
     font-family: "Posterman";
     src: url("./assets/fonts/Posterman.otf");

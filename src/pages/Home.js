@@ -129,13 +129,13 @@ function Home() {
           >
             <h1
               id="mainText"
-              className=" pt-[250px] lg:pt-[640px] pb-12 lg:pb-8	font-semibold lg:font-extrabold text-[3.4rem] lg:text-8xl bg-gradient-to-r bg-clip-text  text-transparent 
+              className=" pt-[250px] lg:pt-[640px] pb-6 lg:pb-8	font-semibold lg:font-extrabold text-[3.3rem] lg:text-8xl bg-gradient-to-r bg-clip-text  text-transparent 
               from-yellow-400 via-yellow-700 to-yellow-300
               animate-text"
             >
               Style that suits you
             </h1>
-            <p className="text-2xl  text-white
+            <p className="text-xl  text-white
              lg:text-3xl ">
               Tuxedos and suits, for rent and for keeps.
             </p>
