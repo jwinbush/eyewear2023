@@ -125,11 +125,11 @@ function Home() {
         <div className=" h-[800px] lg:h-[870px] w-full m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-            className="font-Streamster normal-case w-full h-full bg-top bg-cover duration-75 text-center"
+            className="font-Vicenza normal-case w-full h-full bg-top bg-cover duration-75 text-center"
           >
             <h1
               id="mainText"
-              className=" pt-[250px] lg:pt-[640px] pb-6 lg:pb-8	font-semibold lg:font-extrabold text-[3rem] lg:text-8xl bg-gradient-to-r bg-clip-text  text-transparent 
+              className=" pt-[250px] lg:pt-[630px] pb-4	font-[100] text-[3rem] lg:text-9xl bg-gradient-to-r bg-clip-text  text-transparent 
               from-yellow-400 via-yellow-700 to-yellow-300
               animate-text"
             >

@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                Thundergood: ["Thundergood"],
+                Vicenza: ["Vicenza"],
                 Streamster: ["Streamster"],
                 Posterman: ["Posterman", 'sans-serif'],
             },

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
+html {
     font-family: "Posterman";
 }
 
@@ -13,4 +13,9 @@
 @font-face {
     font-family: "Streamster";
     src: url("./assets/fonts/Streamster.ttf");
+}
+
+@font-face {
+    font-family: "Vicenza";
+    src: url("./assets/fonts/Vicenza.otf");
 }
