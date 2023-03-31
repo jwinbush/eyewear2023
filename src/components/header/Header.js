@@ -3,12 +3,7 @@ import $ from "jquery";
 import "./header.css";
 import watch from "../../assets/images/watch.png";
 import { Link } from "react-router-dom";
-import {
-  FaSearchLocation,
-  FaShoppingBag,
-  FaTimes,
-  FaUser,
-} from "react-icons/fa";
+import { FaSearchLocation, FaShippingFast, FaShoppingBag, FaUser } from "react-icons/fa";
 
 //jQuery for navbar
 
@@ -20,11 +15,6 @@ import {
 //   }
 // });
 
-$(function () {
-  $("#x").click(function () {
-    $("#joinNow").slideUp(300);
-  });
-});
 // Navbar buttons
 $(function () {
   $("#list").click(function () {
@@ -40,7 +30,7 @@ $(document).ready(function () {
     $("#clothingMenu").fadeOut(300);
     $("#accessoriesMenu").fadeOut(300);
     $("#suitsMenu").slideDown("medium");
-    $(this).attr('#darkBackground');
+    $(this).attr("#darkBackground");
   });
   $("#suitsMenu").mouseleave(function () {
     $("#suitsMenu").slideUp(400);
@@ -228,21 +218,26 @@ const Header = () => {
   ];
 
   return (
-    <div className="uppercase text-xs">
+    <div className="uppercase text-md font-bold ">
       <div
         id="joinNow"
-        className="font-Posterman lg:text-[0.9rem] text-xs justify-center flex bg-gradient-to-r from-gray-300 via-white to-gray-300 border-b border-gray-800 text-center py-1 text-black"
+        className="font-Posterman justify-center flex bg-gradient-to-r from-gray-300 via-white to-gray-300 border-b border-gray-800 text-center py-1 text-black"
       >
         <h1>
-          <a href="/#" className="cursor-pointer">
-            Join for exclusive offers 🎖️
+          <a href="/#" className="cursor-pointer flex justify-center">
+          Free shipping on $50+ for rewards members <FaShippingFast/>
           </a>
         </h1>
-        <FaTimes id="x" className="cursor-pointer" />
       </div>
-      <div id="mainNav" className="px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700">
+      <div
+        id="mainNav"
+        className="px-4 lg:px-10 relative lg:flex w-full items-center lg:justify-start bg-black py-2 text-white shadow-lg lg:flex-wrap justify-center border-b border-gray-700"
+      >
         <section className="justify-between flex">
-          <div className=" font-Vicenza text-2xl lg:text-4xl py-1 normal-case text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-700 to-yellow-300 hover:animate-text" id="logo">
+          <div
+            className=" font-[200] text-2xl lg:text-3xl py-1 font-Streamster normal-case text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white hover:animate-text"
+            id="logo"
+          >
             <Link to="/" onClick={refreshPage}>
               SharpWear
             </Link>
@@ -276,7 +271,10 @@ const Header = () => {
           </button>
         </section>
         <div id="darkBackground"></div>
-        <nav className="font-Posterman text-[0.9rem] font-normal " data-te-navbar-ref>
+        <nav
+          className="font-Posterman text-[0.9rem] font-normal "
+          data-te-navbar-ref
+        >
           {/* <div className="border-0 py-3 text-xl flex leading-none transition-shadow duration-150 ease-in-outtext-white">
           <h1>Hello</h1>
         </div> */}
@@ -515,18 +513,18 @@ const Header = () => {
               <section>
                 <ul className="lg:flex flex-row gap-8">
                   <li>
-                  <div className=" text-lg py-1">
-                    <Link to="/login" onClick={refreshPage}>
-                      <FaUser />
-                    </Link>
-                  </div>
+                    <div className=" text-lg py-1">
+                      <Link to="/login" onClick={refreshPage}>
+                        <FaUser />
+                      </Link>
+                    </div>
                   </li>
                   <li>
-                  <div className=" text-lg py-1">
-                    <Link to="/shopping-cart" onClick={refreshPage}>
-                      <FaShoppingBag />
-                    </Link>
-                  </div>
+                    <div className=" text-lg py-1">
+                      <Link to="/shopping-cart" onClick={refreshPage}>
+                        <FaShoppingBag />
+                      </Link>
+                    </div>
                   </li>
                 </ul>
               </section>

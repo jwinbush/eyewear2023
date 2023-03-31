@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import './index.css'; //tailwind.css
+import "./index.css"; //tailwind.css
 import Home from "./pages/Home";
 import NewArrivals from "./pages/suits-tuxedos/NewArrivals";
 import Header from "./components/header/Header";
@@ -13,68 +13,30 @@ import Login from "./pages/user/Login";
 import SignUp from "./pages/user/SignUp";
 import Cart from "./pages/cart/ShoppingCart";
 
-
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
-    <Header/>
-    <Routes>
-       
-       <Route
-           path='/'
-           exact
-           element={<Home/>}
-       />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/suits-tuxedos/new" exact element={<NewArrivals />} />
+
+          <Route path="/suits-tuxedos/business" exact element={<Business />} />
+          <Route path="/suits-tuxedos/tuxedo" exact element={<Tuxedos />} />
           <Route
-           path='/suits-tuxedos/new'
-           exact
-           element={<NewArrivals/>}
-       />
-       <Route
-           path='/suits-tuxedos/business'
-           exact
-           element={<Business/>}
-       />
-       <Route
-           path='/suits-tuxedos/tuxedo'
-           exact
-           element={<Tuxedos/>}
-       />
-       <Route
-           path='/suits-tuxedos/formal'
-           exact
-           element={<FormalEvents/>}
-       />
-       <Route
-           path='/suits-tuxedos/wedding'
-           exact
-           element={<Wedding/>}
-       />
-         <Route
-           path='/locations'
-           exact
-           element={<GoogleMaps/>}
-       />
-          <Route
-           path='/login'
-           exact
-           element={<Login/>}
-       />
-         <Route
-           path='/signup'
-           exact
-           element={<SignUp/>}
-       />
-           <Route
-           path='/shopping-cart'
-           exact
-           element={<Cart/>}
-       />
-      
-   </Routes>
-   <Footer/>
-    </BrowserRouter>
+            path="/suits-tuxedos/formal"
+            exact
+            element={<FormalEvents />}
+          />
+          <Route path="/suits-tuxedos/wedding" exact element={<Wedding />} />
+          <Route path="/locations" exact element={<GoogleMaps />} />
+          <Route path="/login" exact element={<Login />} />
+          <Route path="/signup" exact element={<SignUp />} />
+          <Route path="/shopping-cart" exact element={<Cart />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

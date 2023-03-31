@@ -7,6 +7,11 @@ import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image4.png";
 import image5 from "../assets/images/image5.png";
 import marriage from "../assets/images/marriage.png";
+import individual from "../assets/images/individual.png";
+import engaged from "../assets/images/engaged.png";
+import group from "../assets/images/group.png";
+
+import { Link } from "react-router-dom";
 
 //jQuery scroll to top
 $(document).ready(function () {
@@ -31,77 +36,80 @@ function Home() {
     },
   ];
 
-  const mostWanted = [
+  const list = [
     {
       id: 1,
-      title: "New Arrivals",
+      title: "Hampton Black and Ivory Tuxedo",
       imageSrc:
-        "https://i8.amplience.net/i/indochino/15010154_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/new",
+        "https://i8.amplience.net/i/indochino/15010764_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
     },
     {
-      id: 2,
-      title: "Business",
+      id: 1,
+      title: "Highworth Navy Tuxedo",
       imageSrc:
-        "https://i8.amplience.net/i/indochino/15010624_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/business",
+        "https://i8.amplience.net/i/indochino/15011682_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
     },
     {
       id: 3,
-      title: "Tuxedos",
+      title: "Hemsworth Charcoal Suit",
       imageSrc:
-        "https://i8.amplience.net/i/indochino/15014321_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/tuxedo",
+        "https://i8.amplience.net/i/indochino/15010624_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
     },
     {
       id: 4,
-      title: "Formal events",
+      title: "Hampton Ivory Tuxedo",
       imageSrc:
-        "https://i8.amplience.net/i/indochino/15010615_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/formal",
+        "https://i8.amplience.net/i/indochino/15010757_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
     },
     {
       id: 5,
-      title: "Wedding",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15010648_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/wedding",
-    },
-    {
-      id: 6,
-      title: "New Arrivals",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15014327_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/new",
-    },
-    {
-      id: 7,
-      title: "Business",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15015273_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/business",
-    },
-    {
-      id: 8,
-      title: "Tuxedos",
-      imageSrc:
-        "https://i8.amplience.net/i/indochino/15011416_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/tuxedo",
-    },
-    {
-      id: 9,
-      title: "Formal events",
+      title: "Hayle Sharkskin Slate Blue Suit",
       imageSrc:
         "https://i8.amplience.net/i/indochino/15010685_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/formal",
+      link: "/details",
+    },
+  ];
+
+  const recommended = [
+    {
+      id: 1,
+      title: "Halton Navy Chino",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15014593_0_0.webp?pcrop=1300,1600,2340,3200&w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
     },
     {
-      id: 10,
-      title: "Wedding",
+      id: 1,
+      title: "Helston Anti-Wrinkle White Shirt",
       imageSrc:
-        "https://i8.amplience.net/i/indochino/15015805_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
-      link: "/suits-tuxedos/wedding",
-    }
+        "https://i8.amplience.net/s/indochino/6431254_0_set/white-solid-design-helston-shirt.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
+    },
+    {
+      id: 3,
+      title: "Huntley Olive Quilted Chesterfield Overcoat",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15013974_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
+    },
+    {
+      id: 4,
+      title: "Black Velvet Bow Tie",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15014714_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
+    },
+    {
+      id: 5,
+      title: "Harford Velvet Navy Suit",
+      imageSrc:
+        "https://i8.amplience.net/i/indochino/15011698_0_0.webp?w=312&sm=aspect&aspect=0.5693430656934306:1&qlt=100",
+      link: "/details",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -119,231 +127,109 @@ function Home() {
   };
 
   return (
-    <div className="bg-white uppercase text-sm ">
+    <div className="bg-white uppercase text-md">
       {/* <Header /> */}
       <div id="mainBody">
-        <div className=" h-[800px] lg:h-[870px] w-full m-auto relative group">
+        <div className=" h-[800px] lg:h-screen w-full m-auto relative group">
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-            className="font-Vicenza normal-case w-full h-full bg-top bg-cover duration-75 text-center"
+            className="font-Streamster normal-case w-full h-[830px] bg-top bg-cover duration-75 text-center"
           >
             <h1
               id="mainText"
-              className=" font-semibold pt-[250px] lg:pt-[630px] pb-4	lg:font-[100] text-[3.5rem] lg:text-9xl bg-gradient-to-r bg-clip-text  text-transparent 
+              className=" pt-[250px] lg:pt-[600px] pb-6 lg:pb-8 lg:font-bold text-[3.1rem] lg:text-9xl bg-gradient-to-r bg-clip-text  text-transparent 
               from-yellow-400 via-yellow-700 to-yellow-300
               animate-text"
             >
               Style that suits you
             </h1>
-            <p className="text-xl  text-white
-             lg:text-3xl lg:font-[100] font-semibold ">
+            <p
+              className="text-xl  text-white
+             lg:text-3xl font-[200] "
+            >
               Tuxedos and suits, for rent and for keeps.
             </p>
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 rounded-full lg:text-3xl text-2xl p-2 bg-white/20 text-gray-600 cursor-pointer w-10 h-10 lg:w-12 lg:h-12">
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 rounded-full lg:text-3xl text-2xl p-2  text-gray-900 cursor-pointer w-10 h-10 lg:w-12 lg:h-12">
             <BsChevronCompactLeft onClick={prevSlide} />
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 rounded-full lg:text-3xl text-2xl p-2 bg-white/20 text-gray-600 cursor-pointer w-10 h-10 lg:w-12 lg:h-12">
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 rounded-full lg:text-3xl text-2xl p-2  text-gray-900 cursor-pointer w-10 h-10 lg:w-12 lg:h-12">
             <BsChevronCompactRight onClick={nextSlide} />
           </div>
         </div>
         {/* <!-- Container for demo purpose --> */}
-        <div className="container my-24 px-6 mx-auto">
+        <div className="container mt-24 mx-auto h-full">
           {/* <!-- Section: Design Block --> */}
           <section className="mb-32 text-gray-800 text-center">
-            <h2 className="md:text-3xl text-black font-bold mb-12 text-center ">
+            <h2 className="lg:text-4xl text-2xl text-black font-bold mb-12 text-center ">
               OUR MOST-WANTED STYLES
             </h2>
-
-            <div className="grid lg:grid-cols-5 md:grid-cols-4 lg:gap-6 xl:gap-x-12 grid-cols-2 gap-4">
-              <div className="mb-6 lg:mb-0">
-                <div>
-                  <div
-                    className="relative overflow-hidden bg-no-repeat bg-cover ripple hover:animate-pulse mb-6"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="https://static.theblacktux.com/products/tuxedos/Ocean%20Velvet%20Shawl%20Jacket%20Tuxedo/01_2019_0924_TBT_HC19_eComm_02_OceanVelvetShawl_097.jpeg?trim=0,186&width=461"
-                      className="w-full h-full"
-                      alt="Louvre"
-                    />
-                    <a href="#!">
-                      <div
-                        className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                        style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                      ></div>
-                    </a>
-                  </div>
-
-                  <h5 className="text-black font-bold mb-3">
-                    Ocean Velvet Tuxedo{" "}
-                  </h5>
-                  <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 640 512"
+            <div className="grid lg:grid-cols-5 md:grid-cols-5 lg:gap-6 grid-cols-1 gap-4">
+              {list.map(({ title, imageSrc, link }) => (
+                <div className="mb-6 lg:mb-0">
+                  <div>
+                    <div
+                      className="relative overflow-hidden  bg-no-repeat bg-cover ripple hover:animate-pulse mb-2"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="light"
                     >
-                      <path
-                        fill="currentColor"
-                        d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"
+                      <img
+                        src={imageSrc}
+                        className="w-full h-full"
+                        alt="Louvre"
                       />
-                    </svg>
-                    Business
+                      <Link to={link}>
+                        <div
+                          className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                          style={{
+                            backgroundColor: "rgba(251, 251, 251, 0.2)",
+                          }}
+                        ></div>
+                      </Link>
+                    </div>
+
+                    <h5 className="text-black mb-3 pb-6">{title}</h5>
                   </div>
                 </div>
-              </div>
-              <div className="mb-6 lg:mb-0">
-                <div>
-                  <div
-                    className="relative overflow-hidden bg-no-repeat bg-cover ripple hover:animate-pulse mb-6"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="https://static.theblacktux.com/products/tuxedos/Light%20Blue%20Shawl%20Tuxedo/01_2019_0924_TBT_HC19_eComm_01_LightBlueShawl_044.jpg?trim=0,186&width=461"
-                      className="w-full h-full"
-                      alt="Louvre"
-                    />
-                    <a href="#!">
-                      <div
-                        className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                        style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                      ></div>
-                    </a>
-                  </div>
-
-                  <h5 className="text-black font-bold mb-3">
-                    Light Blue Shawl Tuxedo
-                  </h5>
-                  <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 640 512"
+              ))}
+            </div>
+          </section>
+          {/* <!-- Section: Design Block --> */}
+        </div>
+        <div className="container mt-24 mx-auto h-full">
+          {/* <!-- Section: Design Block --> */}
+          <section className="mb-32 text-gray-800 text-center">
+            <h2 className="lg:text-4xl text-2xl text-black font-bold mb-12 text-center ">
+              RECOMMENDATIONS FOR YOU
+            </h2>
+            <div className="grid lg:grid-cols-5 md:grid-cols-5 lg:gap-6 grid-cols-1 gap-4">
+              {recommended.map(({ title, imageSrc, link }) => (
+                <div className="mb-6 lg:mb-0">
+                  <div>
+                    <div
+                      className="relative overflow-hidden  bg-no-repeat bg-cover ripple hover:animate-pulse mb-2"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="light"
                     >
-                      <path
-                        fill="currentColor"
-                        d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"
+                      <img
+                        src={imageSrc}
+                        className="w-full h-full"
+                        alt="Louvre"
                       />
-                    </svg>
-                    Business
+                      <Link to={link}>
+                        <div
+                          className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                          style={{
+                            backgroundColor: "rgba(251, 251, 251, 0.2)",
+                          }}
+                        ></div>
+                      </Link>
+                    </div>
+
+                    <h5 className="text-black mb-3 pb-6">{title}</h5>
                   </div>
                 </div>
-              </div>
-              <div className="mb-6 lg:mb-0">
-                <div>
-                  <div
-                    className="relative overflow-hidden bg-no-repeat bg-cover ripple hover:animate-pulse mb-6"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="https://static.theblacktux.com/products/tuxedos/contrast-shawl-jacket-tuxedo/1_160223_BlkTuxEcom_WhiteDinnerBlkShawl_496_1812x1875_new.jpg?trim=0,186&width=461"
-                      className="w-full h-full"
-                      alt="Louvre"
-                    />
-                    <a href="#!">
-                      <div
-                        className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                        style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                      ></div>
-                    </a>
-                  </div>
-
-                  <h5 className="text-black font-bold mb-3">
-                    Contrast Shawl Jacket Tuxedo
-                  </h5>
-                  <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 640 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"
-                      />
-                    </svg>
-                    Business
-                  </div>
-                </div>
-              </div>
-
-              <div className="mb-6 lg:mb-0">
-                <div>
-                  <div
-                    className="relative overflow-hidden bg-no-repeat bg-cover ripple hover:animate-pulse mb-6"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="https://static.theblacktux.com/products/suits/charcoal-suit/1_04_CS_1692_EXT_F_1812x1875.jpg?trim=0,186&width=461"
-                      className="w-full h-full"
-                      alt="Louvre"
-                    />
-                    <a href="#!">
-                      <div
-                        className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                        style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                      ></div>
-                    </a>
-                  </div>
-
-                  <h5 className="  font-bold mb-3">Charcoal Suit</h5>
-                  <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 640 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"
-                      />
-                    </svg>
-                    Business
-                  </div>
-                </div>
-              </div>
-
-              <div className="mb-0">
-                <div>
-                  <div
-                    className="relative overflow-hidden h-full bg-no-repeat bg-cover ripple hover:animate-pulse mb-6"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="https://static.theblacktux.com/products/suits/black-suit/1_161129_TBT_Ecom_Black_Suit_1_1587_w1_1812x1875.jpg?trim=0,186&width=461"
-                      className="w-full h-full"
-                      alt="Louvre"
-                    />
-                    <a href="#!">
-                      <div
-                        className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                        style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                      ></div>
-                    </a>
-                  </div>
-
-                  <h5 className="  font-bold mb-3">Black Suit</h5>
-                  <div className="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 640 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"
-                      />
-                    </svg>
-                    Business
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
           {/* <!-- Section: Design Block --> */}
@@ -374,6 +260,97 @@ function Home() {
           />
         </svg>
       </button>
+      <div className="container mt-4 text-center"></div>
+      {/* <!-- Section: Design Block --> */}
+      <section className="bg-gray-200 filter-blur-xl w-full lg:h-screen h-full">
+        <h1 className="text-7xl text-black p-6 font-extrabold">
+          Appointment Types
+        </h1>
+        <p className="text-black text-xl max-w-3xl px-6">
+          Book an appointment that caters to your specific suit-uation to get
+          the most out of your experience fitting in-person at a suit store.
+          Local showrooms offer specialized appointment types within these
+          categories, so find what fits at the SuitShop near you.
+        </p>
+        <div className="grid lg:grid-cols-3 gap-6 p-6 text-black">
+          <div className="bg-white p-2">
+            <img
+              className="w-full hover:animate-pulse"
+              src={individual}
+              alt=""
+            />
+            <h1 className="py-4 text-4xl font-bold">Individual Fitting</h1>
+            <p className="text-lg py-1">
+              Heading into the showroom on your own? A quick suit fitting or
+              styling appointment makes suit shopping a snap, whether you're
+              looking for an event or personal style.
+            </p>
+            <p className="text-lg py-1">
+              Ideal time out from event date: 3 months-6 weeks
+            </p>
+            <Link to="/locations">
+              <button
+                type="submit"
+                className="normal-case my-4 lg:text-xl px-4 py-2 bg-black  text-white font-medium text-xl leading-snug  shadow-md hover:shadow-lg  focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                Book Appointment
+              </button>
+            </Link>
+          </div>
+          <div className="bg-white p-2">
+            <img className="w-full hover:animate-pulse" src={engaged} alt="" />
+            <h1 className="py-4 text-4xl font-bold">
+              Engaged Couple Consultation
+            </h1>
+            <p className="text-lg py-1">
+              Wedding planning? Bring your fiancé to see colors and styles and
+              try on sizes and accessories. We'll walk you through next steps
+              and find your perfect wedding suits.
+            </p>
+            <p className="text-lg py-1">
+              Ideal time out from event date: 3 months-6 weeks
+            </p>
+            <Link to="/locations">
+              <button
+                type="submit"
+                className="normal-case my-4 lg:text-xl px-4 py-2 bg-black  text-white font-medium text-xl leading-snug  shadow-md hover:shadow-lg  focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                Book Appointment
+              </button>
+            </Link>
+          </div>
+          <div className="bg-white p-2">
+            <img className="w-full hover:animate-pulse" src={group} alt="" />
+            <h1 className="py-4 text-4xl font-bold">Group Fittings</h1>
+            <p className="text-lg py-1">
+              Get the party started! Bring your loved ones or wedding party for
+              wedding suit fittings as a group. Wedding dress shopping has
+              nothing on us: get your fit and make it fun!
+            </p>
+            <p className="text-lg py-1">
+              Ideal time out from event date: 5-6 Months
+            </p>
+            <Link to="/locations">
+              <button
+                type="submit"
+                className="normal-case my-4 lg:text-xl px-4 py-2 bg-black  text-white font-medium text-xl leading-snug  shadow-md hover:shadow-lg  focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                Book Appointment
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="grid grid-cols-4 p-6"></div>
+      </section>
 
       {/* <!-- Explanation --> */}
       <div className="container mt-4 text-center text-neutral-800 dark:text-neutral-200"></div>
